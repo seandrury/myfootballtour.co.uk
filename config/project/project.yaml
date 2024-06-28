@@ -1,0 +1,22 @@
+dateModified: 1719252066
+email:
+  fromEmail: sean_drury@hotmail.co.uk
+  fromName: myfootballtour.co.uk
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4a316ab3-49ff-4925-aada-2e783ce740ae: myfootballtour.co.uk # myfootballtour.co.uk
+    07b10073-b192-44fb-ba57-71b3198ea2e0: Common # Common
+    1922ec36-25bb-4e13-aeb9-c460fb1cb07f: myfootballtour.co.uk # myfootballtour.co.uk
+system:
+  edition: solo
+  live: true
+  name: myfootballtour.co.uk
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
