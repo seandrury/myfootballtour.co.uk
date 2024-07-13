@@ -1,0 +1,19 @@
+columnSuffix: wbqnppfh
+contentColumnType: text
+fieldGroup: 5902e87a-39bc-4bf3-ad43-44c38f9f1368 # Meta
+handle: metaTitle
+instructions: null
+name: 'Meta Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

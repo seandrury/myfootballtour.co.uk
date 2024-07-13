@@ -1,5 +1,5 @@
 fieldLayouts:
-  844de080-5fcf-445d-9f83-1f17a8a6eb5e:
+  2550a5be-99ee-4eba-a0b9-40e8c6c7353c:
     tabs:
       -
         elementCondition: null
@@ -27,29 +27,59 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: b7cb8718-22c1-41a4-b2ea-41158578408f
+            uid: 62a422a0-75f9-4f51-8aec-b653e7e28f82
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 1d433b2b-0b4f-4503-8398-8eccef758024 # Navigation Link
+            fieldUid: 22551e37-4303-4127-9d5b-d5ae046c6f61 # Body
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ad8c94c6-5724-44a1-b608-149e848522b3
+            uid: 465e454e-948e-427b-aa3c-2f9fb6bb781f
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: da9dd69e-d244-47f9-90d7-1fb427fa208d
+        uid: 9a10f1fa-5179-445b-bdb8-b845e88b0f0b
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: aaec7dbc-0bbb-4b12-9947-4b02335e61b7 # Meta Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 241bf1c9-2532-44a2-9b4f-7b0abe5711aa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 02f114bd-d885-4d9d-9d23-b33fc220000e # Meta Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 836934f7-0f81-422e-9c7f-a568365170ba
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: 37dd8ef5-2ea7-47bc-b4ed-496ca5566f71
         userCondition: null
 handle: default
 hasTitleField: true
 name: Default
-section: 324611ef-56d7-4b2d-bdbd-aad65b3c18fb # Navigation
+section: c044d02d-94fc-4b3a-8da7-e7a82a5963f3 # Pages
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
