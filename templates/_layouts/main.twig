@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html style="overflow-y: scroll">
+	{% set page = entry ?? category %}
+
+	{% include "_layouts/header" %}
+
+	<body dir="{{ craft.app.locale.orientation }}">
+
+		{% include "_bricks/header-content" %}
+
+		<main id="main">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        {% include "_bricks/footer-content" %}
+        {# {% include "_layouts/footer" %} #}
+
+		{% js "/dist/main.js" at head %}
+
+		<script src="../web/dist/main.js"></script>
+	</body>
+</html>

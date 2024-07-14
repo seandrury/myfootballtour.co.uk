@@ -1,14 +1,32 @@
-dateModified: 1720886105
+dateModified: 1720962000
 email:
   fromEmail: sean_drury@hotmail.co.uk
   fromName: myfootballtour.co.uk
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: $IMAGES_PATH
+    type: craft\fs\Local
+    url: $ASSETS_BASE_URL
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: $TRANSFORM_PATH
+    type: craft\fs\Local
+    url: $ASSETS_BASE_URL
 meta:
   __names__:
     1d433b2b-0b4f-4503-8398-8eccef758024: 'Navigation Link' # Navigation Link
+    1e16db7a-6624-4b1c-a710-26613a5064e9: Images # Images
     2d2d4070-f3c3-43a0-b855-671dae34ab15: Home # Home
+    2e9843eb-00f5-4a5a-8841-362d367feadd: 'Social Share' # Social Share
     02f114bd-d885-4d9d-9d23-b33fc220000e: 'Meta Description' # Meta Description
     4a316ab3-49ff-4925-aada-2e783ce740ae: myfootballtour.co.uk # myfootballtour.co.uk
+    6b146246-521b-46a8-a283-c6bc97088480: Globals # Globals
     6dfa1059-e895-490e-8a03-b286ac3f1bc1: Default # Default
     07b10073-b192-44fb-ba57-71b3198ea2e0: Common # Common
     16b4ecbb-1c20-4583-b6bb-ea5ca8c3c576: Contact # Contact
@@ -24,7 +42,9 @@ meta:
     c044d02d-94fc-4b3a-8da7-e7a82a5963f3: Pages # Pages
     ccd834ae-2f70-46bd-a1cd-677ef90b6e7b: Home # Home
     df5f09a9-5651-4bd4-944f-e53e022e1714: 'Public Schema' # Public Schema
+    f1fc23f6-c460-4917-8b97-6a68453c8ef5: Globals # Globals
     f35f0f33-69b3-4589-b27c-2c5bef818cf5: Contact # Contact
+    f418958e-7e07-4cd0-b5b3-d6f120b4eb84: 'Default Social Share' # Default Social Share
 plugins:
   ckeditor:
     edition: standard
@@ -38,6 +58,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true

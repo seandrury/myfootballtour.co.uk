@@ -85,6 +85,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 2e9843eb-00f5-4a5a-8841-362d367feadd # Social Share
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30f13f27-446e-422c-bd9a-27614c54f238
+            userCondition: null
+            warning: null
+            width: 100
         name: Meta
         uid: 3bcd7c0e-563f-493a-9b40-ee287e8e5651
         userCondition: null

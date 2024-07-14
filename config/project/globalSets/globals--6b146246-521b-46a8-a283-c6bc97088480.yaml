@@ -1,0 +1,24 @@
+fieldLayouts:
+  d2d51fee-5789-4004-b0c4-65a931a52a19:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f418958e-7e07-4cd0-b5b3-d6f120b4eb84 # Default Social Share
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cecad645-6978-4b34-8912-14425287cf47
+            userCondition: null
+            warning: null
+            width: 100
+        name: Defaults
+        uid: c4b217ee-950a-48fa-b8d0-0bb2cf348470
+        userCondition: null
+handle: globals
+name: Globals
+sortOrder: 1
