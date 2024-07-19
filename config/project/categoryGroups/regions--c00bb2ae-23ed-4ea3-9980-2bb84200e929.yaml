@@ -1,0 +1,59 @@
+defaultPlacement: end
+fieldLayouts:
+  ccc4b63e-2b3d-4e2a-b9cb-1ad42f19290a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: b3361bc2-1e6d-441a-b494-ced298860ab7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 87ba3899-10a7-42c3-862f-eefec96e9753 # Map image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 510166fa-5726-4317-927c-3aedc15cc2b5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5274c8a0-f635-499d-80e9-c5015784d1b8
+        userCondition: null
+handle: regions
+name: Regions
+siteSettings:
+  4a316ab3-49ff-4925-aada-2e783ce740ae: # myfootballtour.co.uk
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: ff0b6169-4e70-4a4f-b060-08e03bcb6932

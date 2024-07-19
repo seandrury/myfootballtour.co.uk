@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6c8c42c3-05c3-459d-8541-0e851ec675ac # Stadiums
+handle: region
+instructions: null
+name: Region
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: false
+  source: 'group:c00bb2ae-23ed-4ea3-9980-2bb84200e929' # Regions
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

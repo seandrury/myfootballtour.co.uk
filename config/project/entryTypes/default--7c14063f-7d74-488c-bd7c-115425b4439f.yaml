@@ -1,0 +1,215 @@
+fieldLayouts:
+  215cf9c1-8300-4301-acdb-44675f409ce8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: 'The name by which the stadium is best known.'
+            label: 'Stadium name'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 45629bfa-cf3f-4752-9dbf-7dc0660a87ac
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 985f822c-337b-406b-b800-dfb08fd1513a # Main stadium image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d65c8a8f-b8e7-4f24-9b1b-d50c423f5dd7
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9c9fae53-56ca-49c0-b22c-a5301e981865 # Region
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a3a1082-d67b-41ce-aff3-8ef26ed5e27c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 3af9253e-53bd-40da-b9ff-f7ab98a669f3 # Capacity
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a001f37-d8da-4ad2-8a7c-6df275903c68
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 654927ee-6ba5-4bad-8173-01b520580d6b # Opened
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6cccd8d-8304-49c7-809c-febbb0c299ea
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: aad8776b-64a8-4298-925c-f7e998de33f9 # Closing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b07e577c-c969-4ee1-8bfc-b9abd9e01934
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ea3899cc-7f6f-4358-a8b4-d8da24f2e4e0 # Gallery
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a658bb1-fece-46f0-9318-e551e3f243cd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Stadium
+        uid: 81f3559a-9163-4e65-86a7-a08a7bf6faa8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0123a4e4-2c99-4e36-b5cc-4dcb577b63a3 # Team
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 50fcca04-b55e-4076-8ed3-da25b1c00020
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5878131a-7dba-477f-b0d6-902fa8722fda # League
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6fab291-028f-40d4-a7d2-5d89d06a503d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9828a3dc-019d-4e25-905d-4e2f7046d88b # Team Colour
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f4d892b5-2432-4761-89cf-e65a5b2425ea
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e990e909-8438-4c24-a235-6c086ae9edf6 # Badge
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1f2a818-4870-4c25-9be8-9fb79658bb18
+            userCondition: null
+            warning: null
+            width: 50
+        name: Team
+        uid: 3c09cae6-37bd-46ee-a4bd-b640da118351
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: aaec7dbc-0bbb-4b12-9947-4b02335e61b7 # Meta Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1531c7e3-bf7b-4561-a118-64daa76f32bc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 02f114bd-d885-4d9d-9d23-b33fc220000e # Meta Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1fe31c9-4063-4f1b-a02f-e2eb1b46d5fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2e9843eb-00f5-4a5a-8841-362d367feadd # Social Share
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d894996c-c068-40bf-8c45-ffd62cddbf5e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: b3f14c6d-2a97-4774-b966-e47b0bb2b161
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 13e8c0aa-c675-43d6-9443-8d93e3bd5b80 # Stadiums
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

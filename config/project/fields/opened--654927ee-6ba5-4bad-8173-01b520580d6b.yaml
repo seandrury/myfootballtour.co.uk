@@ -1,0 +1,20 @@
+columnSuffix: wltkekls
+contentColumnType: integer(10)
+fieldGroup: 6c8c42c3-05c3-459d-8541-0e851ec675ac # Stadiums
+handle: opened
+instructions: 'The year the stadium opened to the public.'
+name: Opened
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: none
+  size: 4
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

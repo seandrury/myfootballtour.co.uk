@@ -1,0 +1,68 @@
+columnSuffix: zkvooiet
+contentColumnType: string(14)
+fieldGroup: 6c8c42c3-05c3-459d-8541-0e851ec675ac # Stadiums
+handle: league
+instructions: null
+name: League
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - ''
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Premier League'
+        -
+          - value
+          - premier-league
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Championship
+        -
+          - value
+          - championship
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'League One'
+        -
+          - value
+          - league-one
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'League Two'
+        -
+          - value
+          - league-two
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

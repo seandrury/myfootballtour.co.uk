@@ -144,7 +144,10 @@ body {
 	}
 }
 
-svg {
-	position: relative;
-	display: block;
+#map-all {
+	path {
+		&:hover, &:focus {
+			fill: $green;
+		}
+	}
 }
