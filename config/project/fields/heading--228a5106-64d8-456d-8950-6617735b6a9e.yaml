@@ -1,0 +1,19 @@
+columnSuffix: vythserk
+contentColumnType: text
+fieldGroup: 07b10073-b192-44fb-ba57-71b3198ea2e0 # Common
+handle: heading
+instructions: null
+name: Heading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

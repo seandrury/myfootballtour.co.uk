@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+propagationMethod: all
+siteSettings:
+  4a316ab3-49ff-4925-aada-2e783ce740ae: # myfootballtour.co.uk
+    enabledByDefault: true
+    hasUrls: true
+    template: pages
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: d0b8e748-7d2c-41eb-bf0a-1aa4d0df039d
+type: structure

@@ -1,13 +1,67 @@
-dateModified: 1719601291
+dateModified: 1720962000
 email:
   fromEmail: sean_drury@hotmail.co.uk
   fromName: myfootballtour.co.uk
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: $IMAGES_PATH
+    type: craft\fs\Local
+    url: $ASSETS_BASE_URL
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: $TRANSFORM_PATH
+    type: craft\fs\Local
+    url: $ASSETS_BASE_URL
 meta:
   __names__:
+    1d433b2b-0b4f-4503-8398-8eccef758024: 'Navigation Link' # Navigation Link
+    1e16db7a-6624-4b1c-a710-26613a5064e9: Images # Images
+    2d2d4070-f3c3-43a0-b855-671dae34ab15: Home # Home
+    2e9843eb-00f5-4a5a-8841-362d367feadd: 'Social Share' # Social Share
+    02f114bd-d885-4d9d-9d23-b33fc220000e: 'Meta Description' # Meta Description
     4a316ab3-49ff-4925-aada-2e783ce740ae: myfootballtour.co.uk # myfootballtour.co.uk
+    6b146246-521b-46a8-a283-c6bc97088480: Globals # Globals
+    6dfa1059-e895-490e-8a03-b286ac3f1bc1: Default # Default
     07b10073-b192-44fb-ba57-71b3198ea2e0: Common # Common
+    16b4ecbb-1c20-4583-b6bb-ea5ca8c3c576: Contact # Contact
+    69bafa99-be37-49ec-a361-4ba06906c386: Simple # Simple
+    92ff8290-8a29-43bf-9c83-024d958c06e7: Navigation # Navigation
+    228a5106-64d8-456d-8950-6617735b6a9e: Heading # Heading
     1922ec36-25bb-4e13-aeb9-c460fb1cb07f: myfootballtour.co.uk # myfootballtour.co.uk
+    5902e87a-39bc-4bf3-ad43-44c38f9f1368: Meta # Meta
+    7223d5fa-757c-4af3-aeb3-13ac25f9ca94: Default # Default
+    22551e37-4303-4127-9d5b-d5ae046c6f61: Body # Body
+    324611ef-56d7-4b2d-bdbd-aad65b3c18fb: Navigation # Navigation
+    aaec7dbc-0bbb-4b12-9947-4b02335e61b7: 'Meta Title' # Meta Title
+    c044d02d-94fc-4b3a-8da7-e7a82a5963f3: Pages # Pages
+    ccd834ae-2f70-46bd-a1cd-677ef90b6e7b: Home # Home
+    df5f09a9-5651-4bd4-944f-e53e022e1714: 'Public Schema' # Public Schema
+    f1fc23f6-c460-4917-8b97-6a68453c8ef5: Globals # Globals
+    f35f0f33-69b3-4589-b27c-2c5bef818cf5: Contact # Contact
+    f418958e-7e07-4cd0-b5b3-d6f120b4eb84: 'Default Social Share' # Default Social Share
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.1
+  quick-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true

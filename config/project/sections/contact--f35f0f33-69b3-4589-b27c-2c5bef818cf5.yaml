@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: contact
+name: Contact
+propagationMethod: all
+siteSettings:
+  4a316ab3-49ff-4925-aada-2e783ce740ae: # myfootballtour.co.uk
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/contact
+    uriFormat: contact
+type: single

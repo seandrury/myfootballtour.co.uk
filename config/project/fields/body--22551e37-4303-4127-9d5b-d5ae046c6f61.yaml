@@ -1,0 +1,23 @@
+columnSuffix: wvcsctpc
+contentColumnType: text
+fieldGroup: 07b10073-b192-44fb-ba57-71b3198ea2e0 # Common
+handle: body
+instructions: null
+name: Body
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: 69bafa99-be37-49ec-a361-4ba06906c386 # Simple
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

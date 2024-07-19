@@ -1,0 +1,145 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$spacer: 1rem;
+
+$enable-rounded: true;
+$enable-smooth-scroll: true;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1320px
+);
+
+$spacers: (
+	0: 0,
+	1: $spacer * .25,
+	2: $spacer * .5,
+	3: $spacer,
+	4: $spacer * 1.5,
+	5: $spacer * 2,
+	6: $spacer * 2.5,
+	7: $spacer * 3,
+	8: $spacer * 3.5,
+	9: $spacer * 4,
+	10: $spacer * 4.5,
+	large: $spacer * 5
+);
+
+@import "../node_modules/bootstrap/scss/variables";
+
+$white: #ffffff;
+$black: #1C1C1C;
+$green: #006B04;
+
+$body-bg: $black;
+$body-color: $white;
+
+$link-color: $white;
+$link-decoration: underline;
+$link-hover-color: $green;
+$link-hover-decoration: none;
+
+$min-contrast-ratio: 3;
+
+$text-readability: 100%;
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@400,700;1&family=Poetsen+One&display=swap');
+
+$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-monospace: null;
+$headings-font-family: "Poetsen One", sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$enable-responsive-font-sizes: true;
+
+$display-font-sizes: (
+	1: 4rem,
+	2: 3rem,
+	3: 2.5rem,
+	4: 2rem,
+	5: 1.5rem,
+	6: 1rem,
+);
+
+$line-height-sm: 1.25;
+$line-height-base: 1.5;
+$line-height-lg: 1.75;
+
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2.25;
+$h3-font-size: $font-size-base * 2;
+$h4-font-size: $font-size-base * 1.5;
+
+$display-font-weight: $font-weight-normal;
+$display-line-height: $line-height-lg;
+
+$font-size-base: 1rem;
+
+$btn-border-width: 3px;
+$btn-box-shadow: none;
+$btn-font-weight: $font-weight-bold;
+
+$nav-link-font-size: $font-size-base;
+$nav-link-font-weight: $font-weight-bold;
+
+$navbar-light-color: $white;
+$navbar-light-hover-color: $green;
+$navbar-light-active-color: $green;
+$navbar-light-icon-color: null;
+$navbar-light-toggler-border-color: null;
+$navbar-light-toggler-icon-bg: none;
+
+$enable-cssgrid: true;
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/carousel";
+
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+body {
+  	& {
+		color: $body-color;
+	}
+
+	.test {
+		color: $body-color;
+	}
+}
