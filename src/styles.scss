@@ -43,6 +43,13 @@ $white: #ffffff;
 $black: #1C1C1C;
 $green: #006B04;
 
+$tick-green: #11D100;
+
+$premier-league: $tick-green;
+$championship: #006ED3;
+$league-one: #A50233;
+$league-two: #E66F00;
+
 $body-bg: $black;
 $body-color: $white;
 
@@ -135,12 +142,133 @@ $enable-cssgrid: true;
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 body {
-  	& {
-		color: $body-color;
-	}
+	color: $body-color;
 
 	.test {
 		color: $body-color;
+	}
+}
+
+#select-leagues {
+	.form-control {
+		border: none;
+		display: grid;
+		grid-template-columns: 1rem auto;
+		gap: 1.5rem;
+
+		input[type="checkbox"] {
+			-webkit-appearance: none;
+			appearance: none;
+			background-color: transparent;
+			margin: 0;
+			font: inherit;
+			width: 42px;
+			height: 42px;
+			border: 2px solid $white;
+			border-radius: 2px;
+			display: grid;
+  			place-content: center;
+
+			&:before {
+				content: "";
+				width: .75rem;
+				height: 1.5rem;
+				rotate: 45deg;
+				border: 3px solid $white;
+				border-top: 0;
+				border-left: 0;
+				transform: translate(-2px, -2px);
+				display: none;
+			}
+			
+			&:checked {
+				background-color: $tick-green;
+			
+				&:before {
+					display: block;
+			  	}
+			}
+		}
+	}
+}
+
+.league-colours {
+	#select-leagues {
+		.form-control {
+			input[type="checkbox"] {
+				&:checked {
+					&#premier-league {
+						background-color: $premier-league;
+					}
+
+					&#championship {
+						background-color: $championship;
+					}
+
+					&#league-one {
+						background-color: $league-one;
+					}
+
+					&#league-two {
+						background-color: $league-two;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.labelled-switch {
+	gap: 1rem;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+
+	input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+
+		&:checked + .slider {
+			background-color: $green;
+
+			&:before {
+				-webkit-transform: translateX(26px);
+				-ms-transform: translateX(26px);
+				transform: translateX(26px);
+			}
+		}
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+		border-radius: 35px;
+
+		&:before {
+			position: absolute;
+			content: "";
+			height: 26px;
+			width: 26px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+			border-radius: 50%;
+		}
 	}
 }
 

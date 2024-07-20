@@ -12588,6 +12588,104 @@ body .test {
   color: #ffffff;
 }
 
+#select-leagues .form-control {
+  border: none;
+  display: grid;
+  grid-template-columns: 1rem auto;
+  gap: 1.5rem;
+}
+#select-leagues .form-control input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+}
+#select-leagues .form-control input[type=checkbox]:before {
+  content: "";
+  width: 0.75rem;
+  height: 1.5rem;
+  rotate: 45deg;
+  border: 3px solid #ffffff;
+  border-top: 0;
+  border-left: 0;
+  transform: translate(-2px, -2px);
+  display: none;
+}
+#select-leagues .form-control input[type=checkbox]:checked {
+  background-color: #11D100;
+}
+#select-leagues .form-control input[type=checkbox]:checked:before {
+  display: block;
+}
+
+.league-colours #select-leagues .form-control input[type=checkbox]:checked#premier-league {
+  background-color: #11D100;
+}
+.league-colours #select-leagues .form-control input[type=checkbox]:checked#championship {
+  background-color: #006ED3;
+}
+.league-colours #select-leagues .form-control input[type=checkbox]:checked#league-one {
+  background-color: #A50233;
+}
+.league-colours #select-leagues .form-control input[type=checkbox]:checked#league-two {
+  background-color: #E66F00;
+}
+
+.labelled-switch {
+  gap: 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch input:checked + .slider {
+  background-color: #006B04;
+}
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 35px;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
 #map-all path:hover, #map-all path:focus {
   fill: #006B04;
 }
