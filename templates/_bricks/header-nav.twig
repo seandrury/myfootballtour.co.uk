@@ -5,13 +5,28 @@
     .all()
 %}
 
-<nav class="navbar navbar-expand-lg bg-dark py-3 shadow-sm" data-bs-theme="light">
-    <div class="container-xl">
+<nav class="nav flex-column bg-light shadow-sm" data-bs-theme="light">
+    {# <div class="container-xl">
 
-        {# hamburger menu #}
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
         </button>
 
-    </div>
+    </div> #}
+
+    <ul class="d-grid nav-list list-unstyled mb-0">
+        <li class="nav-item d-flex align-items-center gap-3 position-relative">
+            {% include "_svg/nav-icons/nav-football.svg" %}
+            <a class=" stretched-link nav-link" href="/">My Football Tour</a>
+        </li>
+
+        {% nav node in navItems %}
+            {% set navigationLinkUrl = node.navigationLink[0].getUrl() ?? "#" %}
+
+            <li class="nav-item d-none d-md-flex align-items-center gap-3 position-relative">
+                {% include "_svg/nav-icons/nav-football.svg" %}
+                <a class="stretched-link nav-link" href="{{ navigationLinkUrl }}">{{ node.title }}</a>
+            </li>
+        {% endnav %}
+    </ul>
 </nav>

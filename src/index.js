@@ -11,6 +11,21 @@ import _ from 'lodash';
   
 //   document.body.appendChild(component());
 
+// function expandMainNav() {
+// 	$(document).ready(function(){
+// 		$(".nav").hover(
+// 			function() {
+// 				setTimeout(function() {
+// 					$(".nav .nav-list .nav-item .nav-link").removeAttr("hidden").show(); // Remove hidden attribute and show the element
+// 				}, 400);
+// 			}, 
+// 			function() {
+// 				$(".nav .nav-list .nav-item .nav-link").attr("hidden", true).hide(); // Add hidden attribute and hide the element (optional)
+// 			}
+// 		);
+// 	});
+// }
+
 function toggleColourMode() {
 	$(".toggle-colours .switch input[type='checkbox']").change(function() {
 		if(this.checked) {
@@ -36,7 +51,9 @@ function toggleAccessibilityMode() {
 }
 
 $(function() {
-  	if ($('.interactive-map').length > 0) {
+  	expandMainNav();
+	
+	if ($('.interactive-map').length > 0) {
 		toggleColourMode();
 
 		toggleAccessibilityMode();

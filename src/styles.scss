@@ -91,7 +91,8 @@ $line-height-lg: 1.75;
 $h1-font-size: $font-size-base * 3;
 $h2-font-size: $font-size-base * 2.25;
 $h3-font-size: $font-size-base * 2;
-$h4-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.75;
+$h5-font-size: $font-size-base * 1.5;
 
 $display-font-weight: $font-weight-normal;
 $display-line-height: $line-height-lg;
@@ -149,11 +150,65 @@ body {
 	}
 }
 
+.nav {
+	position: fixed;
+	z-index: $zindex-fixed;
+	border: 3px solid $white;
+	min-width: 0;
+	transition: 0.6s ease-in-out min-width;
+
+	.nav-list {
+		gap: 3px;
+		
+		.nav-item {
+			background-color: $green;
+			padding: 1rem;
+			text-align: center;
+			transition: 0.2s ease-in-out all;
+
+			a {
+				text-decoration: none;
+				font-family: $headings-font-family;
+				font-size: $h4-font-size;
+			}
+
+			&:hover, &:active {
+				background-color: $white;
+
+				svg {
+					path {
+						fill: $green;
+						transition: .2s ease-in-out all;
+					}
+				}
+
+				a {
+					color: $green;
+				}
+			}
+		}
+	}
+
+	&:hover, &:active {
+		min-width: 500px;
+	}
+
+	@include media-breakpoint-down(md) {
+		position: relative;
+
+		.nav-list {
+			.nav-item {
+				a {
+					font-size: $h5-font-size;
+				}
+			}
+		}
+	}
+}
+
 #select-leagues {
 	.form-control {
 		border: none;
-		display: grid;
-		grid-template-columns: 1rem auto;
 		gap: 1.5rem;
 
 		input[type="checkbox"] {

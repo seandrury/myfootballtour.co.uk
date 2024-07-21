@@ -249,16 +249,21 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h5, .h5 {
+    font-size: 1.5rem;
+  }
 }
 
 h6, .h6 {
@@ -12588,10 +12593,51 @@ body .test {
   color: #ffffff;
 }
 
+.nav {
+  position: fixed;
+  z-index: 1030;
+  border: 3px solid #ffffff;
+  min-width: 0;
+  transition: 0.6s ease-in-out min-width;
+}
+.nav .nav-list {
+  gap: 3px;
+}
+.nav .nav-list .nav-item {
+  background-color: #006B04;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.2s ease-in-out all;
+}
+.nav .nav-list .nav-item a {
+  text-decoration: none;
+  font-family: "Poetsen One", sans-serif;
+  font-size: 1.75rem;
+}
+.nav .nav-list .nav-item:hover, .nav .nav-list .nav-item:active {
+  background-color: #ffffff;
+}
+.nav .nav-list .nav-item:hover svg path, .nav .nav-list .nav-item:active svg path {
+  fill: #006B04;
+  transition: 0.2s ease-in-out all;
+}
+.nav .nav-list .nav-item:hover a, .nav .nav-list .nav-item:active a {
+  color: #006B04;
+}
+.nav:hover, .nav:active {
+  min-width: 500px;
+}
+@media (max-width: 767.98px) {
+  .nav {
+    position: relative;
+  }
+  .nav .nav-list .nav-item a {
+    font-size: 1.5rem;
+  }
+}
+
 #select-leagues .form-control {
   border: none;
-  display: grid;
-  grid-template-columns: 1rem auto;
   gap: 1.5rem;
 }
 #select-leagues .form-control input[type=checkbox] {
