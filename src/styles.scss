@@ -106,12 +106,12 @@ $btn-font-weight: $font-weight-bold;
 $nav-link-font-size: $font-size-base;
 $nav-link-font-weight: $font-weight-bold;
 
-$navbar-light-color: $white;
-$navbar-light-hover-color: $green;
-$navbar-light-active-color: $green;
-$navbar-light-icon-color: null;
-$navbar-light-toggler-border-color: null;
-$navbar-light-toggler-icon-bg: none;
+// $navbar-light-color: $white;
+// $navbar-light-hover-color: $green;
+// $navbar-light-active-color: $green;
+// $navbar-light-icon-color: null;
+// $navbar-light-toggler-border-color: null;
+// $navbar-light-toggler-icon-bg: none;
 
 $enable-cssgrid: true;
 
@@ -154,8 +154,9 @@ body {
 	position: fixed;
 	z-index: $zindex-fixed;
 	border: 3px solid $white;
-	min-width: 0;
-	transition: 0.6s ease-in-out min-width;
+	width: 110px;
+	transition: 0.6s ease-in-out width;
+	overflow: hidden;
 
 	.nav-list {
 		gap: 3px;
@@ -165,6 +166,8 @@ body {
 			padding: 1rem;
 			text-align: center;
 			transition: 0.2s ease-in-out all;
+			white-space: nowrap;
+			// overflow-x: hidden;
 
 			a {
 				text-decoration: none;
@@ -190,11 +193,12 @@ body {
 	}
 
 	&:hover, &:active {
-		min-width: 500px;
+		width: 500px;
 	}
 
 	@include media-breakpoint-down(md) {
 		position: relative;
+		width: auto;
 
 		.nav-list {
 			.nav-item {
