@@ -1,4 +1,4 @@
-dateModified: 1721423912
+dateModified: 1721680714
 elementSources:
   craft\elements\Category:
     -
@@ -9,6 +9,7 @@ elementSources:
       key: 'group:fbf6d79a-ab27-43a9-b11d-83e6aca93740' # Team Colours
       tableAttributes:
         - 'field:7f8641d9-b724-4273-9310-c2ffe0b4934c' # Colour
+        - id
       type: native
     -
       defaultSort:
@@ -52,6 +53,7 @@ elementSources:
         - 'field:0123a4e4-2c99-4e36-b5cc-4dcb577b63a3' # Team
         - 'field:e990e909-8438-4c24-a235-6c086ae9edf6' # Badge
         - 'field:5878131a-7dba-477f-b0d6-902fa8722fda' # League
+        - 'field:9828a3dc-019d-4e25-905d-4e2f7046d88b' # Team Colour
       type: native
     -
       heading: Structures
@@ -123,6 +125,7 @@ meta:
     ea3899cc-7f6f-4358-a8b4-d8da24f2e4e0: Gallery # Gallery
     f1fc23f6-c460-4917-8b97-6a68453c8ef5: Globals # Globals
     f35f0f33-69b3-4589-b27c-2c5bef818cf5: Contact # Contact
+    f390dfe0-620d-4ba5-8938-82816e24f438: Icon # Icon
     f418958e-7e07-4cd0-b5b3-d6f120b4eb84: 'Default Social Share' # Default Social Share
     fbf6d79a-ab27-43a9-b11d-83e6aca93740: 'Team Colours' # Team Colours
 plugins:

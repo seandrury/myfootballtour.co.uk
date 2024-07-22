@@ -150,6 +150,10 @@ body {
 	}
 }
 
+footer {
+	background-color: $green;
+}
+
 .nav {
 	position: fixed;
 	z-index: $zindex-fixed;
@@ -285,8 +289,8 @@ body {
 .switch {
 	position: relative;
 	display: inline-block;
-	width: 60px;
-	height: 34px;
+	width: 74px;
+	height: 36px;
 
 	input {
 		opacity: 0;
@@ -297,9 +301,9 @@ body {
 			background-color: $green;
 
 			&:before {
-				-webkit-transform: translateX(26px);
-				-ms-transform: translateX(26px);
-				transform: translateX(26px);
+				-webkit-transform: translateX(38px);
+				-ms-transform: translateX(38px);
+				transform: translateX(38px);
 			}
 		}
 	}
@@ -311,18 +315,19 @@ body {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: #ccc;
+		background-color: transparent;
 		-webkit-transition: .4s;
 		transition: .4s;
 		border-radius: 35px;
+		border: 5px solid $white;
 
 		&:before {
 			position: absolute;
 			content: "";
-			height: 26px;
-			width: 26px;
-			left: 4px;
-			bottom: 4px;
+			height: 20px;
+			width: 20px;
+			left: 3px;
+			bottom: 3px;
 			background-color: white;
 			-webkit-transition: .4s;
 			transition: .4s;

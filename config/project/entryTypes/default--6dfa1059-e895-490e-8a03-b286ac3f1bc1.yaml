@@ -30,7 +30,19 @@ fieldLayouts:
             uid: b7cb8718-22c1-41a4-b2ea-41158578408f
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: f390dfe0-620d-4ba5-8938-82816e24f438 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b118683-fe76-417e-beac-76866408dee5
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 1d433b2b-0b4f-4503-8398-8eccef758024 # Navigation Link

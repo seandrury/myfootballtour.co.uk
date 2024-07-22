@@ -1,0 +1,79 @@
+columnSuffix: kskzccbp
+contentColumnType: string(8)
+fieldGroup: 92ff8290-8a29-43bf-9c83-024d958c06e7 # Navigation
+handle: icon
+instructions: null
+name: Icon
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - ''
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Football
+        -
+          - value
+          - football
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Pin
+        -
+          - value
+          - pin
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Stadium
+        -
+          - value
+          - stadium
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Map
+        -
+          - value
+          - map
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Contact
+        -
+          - value
+          - contact
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

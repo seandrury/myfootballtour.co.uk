@@ -50,13 +50,37 @@ function toggleAccessibilityMode() {
 	});
 }
 
+function setupMap() {
+	
+	$(".interactive-map .clickable-region")
+	.unbind()
+	.click(function (e) {
+		e.preventDefault();
+
+		var region = $(this).attr("data-id");
+
+		var newImage = "https://myfootballtour.ddev.site/assets/images/maps/" + region + ".svg";
+
+		$("svg.map-all").fadeOut(function() {
+			$("svg.map-all").attr("src", newImage);
+
+			$("svg.map-all").fadeIn(function() {
+				$(".clickable-region").hide();
+			});
+		})
+	});
+
+}
+
 $(function() {
-  	expandMainNav();
+  	// expandMainNav();
 	
 	if ($('.interactive-map').length > 0) {
 		toggleColourMode();
 
 		toggleAccessibilityMode();
+
+		setupMap();
   	}
 
 	// console.log('function');
