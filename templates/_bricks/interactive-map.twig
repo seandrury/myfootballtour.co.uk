@@ -1,0 +1,63 @@
+<div class="interactive-map team-colours">
+    {% set leagues = craft.app.fields.getFieldByHandle('league').options %}
+
+    <form id="select-leagues">
+        <div class="row">
+        {% for option in leagues %}
+            {% if option.value != '' %}
+                <div class="col-md-6">
+                    <label class="form-control d-flex align-items-center">
+                        <input type="checkbox" name="{{ option.value }}" id="{{ option.value }}" checked />{{ option.label }}
+                    </label>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </form>
+
+    <div class="map-all py-5">
+        {% include "_svg/maps/england-and-wales.svg" %}
+    </div>
+
+    <div class="map-region position-relative" style="display: none;">
+        {% set regions = craft.categories.group('regions').all() %}
+
+        {% for region in regions %}
+            <div class="region-pins {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
+                {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['region', 'teamColour']).all() %}
+
+                {% for pin in stadiums %}
+                    {% set locationX = pin.left %}
+                    {% set locationY = pin.top %}
+                    {% set colour = pin.teamColour[0] %}
+                    {% set league = pin.league %}
+
+                    <a class="stadium-pin pin-{{ colour.slug }} {{ league|kebab }}" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+
+        <p class="float-start" id="region-heading"></p>
+        <a class="btn btn-green show-all float-end">Show full map</a>
+        <img src="/" class="img-fluid py-5 w-100 h-100">
+    </div>
+
+    <div class="labelled-switch d-flex flex-row align-items-center mb-3 toggle-colours">
+        <p class="mb-0">Team colours</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p class="mb-0">League colours</p>
+    </div>
+
+    <div class="labelled-switch d-flex flex-row align-items-center toggle-accessibility">
+        <p class="mb-0">Accessibility mode off</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p class="mb-0">Accessibility mode on</p>
+    </div>
+</div>

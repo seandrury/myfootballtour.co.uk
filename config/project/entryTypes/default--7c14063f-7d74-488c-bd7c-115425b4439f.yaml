@@ -103,6 +103,36 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: Position
+            type: craft\fieldlayoutelements\Heading
+            uid: 7b9f9421-5225-49b6-984a-e3733ba9cf2e
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 8d3403d7-8b7e-40af-abca-e33fd8a369fa # Left
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a988416b-011b-4946-8bc1-0d62c16235b1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9fec835e-6354-48be-a311-ef98bd2ec6a8 # Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41309a90-7bb2-4c9b-8088-4a97ab8c2ec1
+            userCondition: null
+            warning: null
+            width: 50
         name: Stadium
         uid: 81f3559a-9163-4e65-86a7-a08a7bf6faa8
         userCondition: null

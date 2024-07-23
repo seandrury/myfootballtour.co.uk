@@ -57,16 +57,29 @@ function setupMap() {
 	.click(function (e) {
 		e.preventDefault();
 
-		var region = $(this).attr("data-id");
+		var regionName = $(this).attr("data-name");
+		var regionId = $(this).attr("data-id");
 
-		var newImage = "https://myfootballtour.ddev.site/assets/images/maps/" + region + ".svg";
+		var newImage = "https://myfootballtour.ddev.site/assets/images/maps/" + regionId + ".svg";
 
-		$("svg.map-all").fadeOut(function() {
-			$("svg.map-all").attr("src", newImage);
+		$(".map-all svg").fadeOut(function() {
+			$(".map-region img").attr("src", newImage);
+			$(".map-region #region-heading").html("Showing " + regionName);
 
-			$("svg.map-all").fadeIn(function() {
-				$(".clickable-region").hide();
-			});
+			$(".map-region").fadeIn();
+			$(".region-pins." + regionId).fadeIn("500");
+		})
+	});
+
+	$(".map-region .show-all")
+	.unbind()
+	.click(function (e) {
+		e.preventDefault();
+
+		$(".region-pins").fadeOut("500");
+
+		$(".map-region").fadeOut(function() {
+			$(".map-all svg").fadeIn();
 		})
 	});
 

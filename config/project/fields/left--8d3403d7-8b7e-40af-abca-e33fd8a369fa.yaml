@@ -1,0 +1,20 @@
+columnSuffix: ipvgfolo
+contentColumnType: smallint(3)
+fieldGroup: 6c8c42c3-05c3-459d-8541-0e851ec675ac # Stadiums
+handle: left
+instructions: null
+name: Left
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: 100
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: '%'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

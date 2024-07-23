@@ -24,7 +24,7 @@
             {% set navigationLinkUrl = node.navigationLink[0].getUrl() ?? "#" %}
             {% set icon = node.icon ?? "football" %}
 
-            <li class="nav-item d-none d-md-flex align-items-center gap-3 position-relative">
+            <li class="nav-item d-none d-md-flex align-items-center gap-3 position-relative">                
                 {% include "_svg/nav-icons/nav-" ~ icon ~ ".svg" %}
                 <a class="stretched-link nav-link" href="{{ navigationLinkUrl }}">{{ node.title }}</a>
             </li>

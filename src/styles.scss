@@ -39,16 +39,31 @@ $spacers: (
 
 @import "../node_modules/bootstrap/scss/variables";
 
+// Brand colours
 $white: #ffffff;
 $black: #1C1C1C;
 $green: #006B04;
 
 $tick-green: #11D100;
 
+// League colours
 $premier-league: $tick-green;
 $championship: #006ED3;
 $league-one: #A50233;
 $league-two: #E66F00;
+
+// Team colours
+$team-red: #c8102e;
+$team-blue: #034694;
+$team-sky-blue: #6cabdd;
+$team-navy-blue: #00194a;
+$team-claret: #6c1d45;
+$team-green: #004237;
+$team-yellow: #fff200;
+$team-gold: #fdb913;
+$team-orange: #f68712;
+$team-white: $white;
+$team-black: #000000;
 
 $body-bg: $black;
 $body-color: $white;
@@ -152,6 +167,35 @@ body {
 
 footer {
 	background-color: $green;
+}
+
+$team-colours: (
+	red: $team-red,
+	blue: $team-blue,
+	sky-blue: $team-sky-blue,
+	navy-blue: $team-navy-blue,
+	claret: $team-claret,
+	green: $team-green,
+	yellow: $team-yellow,
+	gold: $team-gold,
+	orange: $team-orange,
+	white: $team-white,
+	black: $team-black
+);
+
+// Loop through each color and create a class
+@each $name, $colour in $team-colours {
+  .pin-#{$name} {
+    background-color: $colour;
+  }
+}
+
+.btn {
+	padding: 4px 12px;
+
+	&.btn-green {
+		background-color: $green;
+	}
 }
 
 .nav {
@@ -279,8 +323,42 @@ footer {
 			}
 		}
 	}
+
+	.map-region {
+		.region-pins {
+			.stadium-pin {
+				&.premier-league {
+					background-color: $premier-league;
+				}
+				&.championship {
+					background-color: $championship;
+				}
+				&.league-one {
+					background-color: $league-one;
+				}
+				&.league-two {
+					background-color: $league-two;
+				}
+			}
+		}
+	}
 }
 
+// .accessibility-mode {
+// 	.map-region {
+// 		.region-pins {
+// 			.stadium-pin {
+// 				width: 0; 
+// 				height: 0; 
+// 				background-color: transparent;
+// 				border-left: 5px solid transparent;
+// 				border-right: 5px solid transparent;
+// 				border-top: 5px solid transparent;
+// 				border-bottom: 5px solid $team-orange;
+// 			}
+// 		}
+// 	}
+// }
 
 .labelled-switch {
 	gap: 1rem;
@@ -336,10 +414,26 @@ footer {
 	}
 }
 
-#map-all {
-	path {
-		&:hover, &:focus {
-			fill: $green;
+.map-all {
+	svg {
+		path {
+			&:hover, &:focus {
+				fill: $green;
+			}
+		}
+	}
+}
+
+.map-region {
+	.region-pins {
+		.stadium-pin {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			border-radius: 100%;
+			display: block;
+			border: 2px solid $black;
+			box-shadow: 0 4px 4px rgba($black, .4);
 		}
 	}
 }

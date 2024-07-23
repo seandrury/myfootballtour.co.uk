@@ -9,45 +9,7 @@
 
                 {{ entry.body }}
 
-                <div class="interactive-map team-colours">
-                    {% set leagues = craft.app.fields.getFieldByHandle('league').options %}
-
-                    <form id="select-leagues">
-                        <div class="row">
-                        {% for option in leagues %}
-                            {% if option.value != '' %}
-                                <div class="col-md-6">
-                                    <label class="form-control d-flex align-items-center">
-                                        <input type="checkbox" name="{{ option.value }}" id="{{ option.value }}" checked />{{ option.label }}
-                                    </label>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        </div>
-                    </form>
-        
-                    <div class="py-5">
-                        {% include "_svg/maps/england-and-wales.svg" %}
-                    </div>
-
-                    <div class="labelled-switch d-flex flex-row align-items-center mb-3 toggle-colours">
-                        <p class="mb-0">Team colours</p>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <p class="mb-0">League colours</p>
-                    </div>
-
-                    <div class="labelled-switch d-flex flex-row align-items-center toggle-accessibility">
-                        <p class="mb-0">Accessibility mode off</p>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <p class="mb-0">Accessibility mode on</p>
-                    </div>
-                </div>
+                {% include "_bricks/interactive-map" %}
             </div>
         </div>
     </div>

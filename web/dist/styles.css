@@ -12597,6 +12597,57 @@ footer {
   background-color: #006B04;
 }
 
+.pin-red {
+  background-color: #c8102e;
+}
+
+.pin-blue {
+  background-color: #034694;
+}
+
+.pin-sky-blue {
+  background-color: #6cabdd;
+}
+
+.pin-navy-blue {
+  background-color: #00194a;
+}
+
+.pin-claret {
+  background-color: #6c1d45;
+}
+
+.pin-green {
+  background-color: #004237;
+}
+
+.pin-yellow {
+  background-color: #fff200;
+}
+
+.pin-gold {
+  background-color: #fdb913;
+}
+
+.pin-orange {
+  background-color: #f68712;
+}
+
+.pin-white {
+  background-color: #ffffff;
+}
+
+.pin-black {
+  background-color: #000000;
+}
+
+.btn {
+  padding: 4px 12px;
+}
+.btn.btn-green {
+  background-color: #006B04;
+}
+
 .nav {
   position: fixed;
   z-index: 1030;
@@ -12690,6 +12741,18 @@ footer {
 .league-colours #select-leagues .form-control input[type=checkbox]:checked#league-two {
   background-color: #E66F00;
 }
+.league-colours .map-region .region-pins .stadium-pin.premier-league {
+  background-color: #11D100;
+}
+.league-colours .map-region .region-pins .stadium-pin.championship {
+  background-color: #006ED3;
+}
+.league-colours .map-region .region-pins .stadium-pin.league-one {
+  background-color: #A50233;
+}
+.league-colours .map-region .region-pins .stadium-pin.league-two {
+  background-color: #E66F00;
+}
 
 .labelled-switch {
   gap: 1rem;
@@ -12740,8 +12803,18 @@ footer {
   border-radius: 50%;
 }
 
-#map-all path:hover, #map-all path:focus {
+.map-all svg path:hover, .map-all svg path:focus {
   fill: #006B04;
+}
+
+.map-region .region-pins .stadium-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  display: block;
+  border: 2px solid #1C1C1C;
+  box-shadow: 0 4px 4px rgba(28, 28, 28, 0.4);
 }
 
 /*# sourceMappingURL=styles.css.map */
