@@ -1,4 +1,4 @@
-dateModified: 1721766268
+dateModified: 1721933446
 elementSources:
   craft\elements\Category:
     -
@@ -121,6 +121,7 @@ meta:
     aaec7dbc-0bbb-4b12-9947-4b02335e61b7: 'Meta Title' # Meta Title
     c00bb2ae-23ed-4ea3-9980-2bb84200e929: Regions # Regions
     c044d02d-94fc-4b3a-8da7-e7a82a5963f3: Pages # Pages
+    c570e08f-a17f-43b1-bf34-a61b09e2ca67: 'Club crest' # Club crest
     ccd834ae-2f70-46bd-a1cd-677ef90b6e7b: Home # Home
     df5f09a9-5651-4bd4-944f-e53e022e1714: 'Public Schema' # Public Schema
     e990e909-8438-4c24-a235-6c086ae9edf6: Badge # Badge

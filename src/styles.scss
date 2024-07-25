@@ -185,9 +185,40 @@ $team-colours: (
 
 // Loop through each color and create a class
 @each $name, $colour in $team-colours {
-  .pin-#{$name} {
-    background-color: $colour;
-  }
+  	.pin-#{$name} {
+    	background-color: $colour;
+
+		&:hover, &:focus {
+			background-color: mix($colour, $white);
+		}
+  	}
+
+  	.pin-black {
+		background-color: $team-white;
+	}
+
+	.btn-#{$name} {
+		border: 3px solid $colour;
+		background-color: $colour;
+		color: $white;
+
+		&:hover, &:focus, &:active {
+			border: 3px solid $colour;
+			background-color: transparent;
+			color: $black;
+		}
+	}
+
+	.btn-#{$name}-outline {
+		border: 3px solid $colour;
+		background-color: transparent;
+		color: $black;
+
+		&:hover, &:focus, &:active {
+			background-color: $colour;
+			color: $white;
+		}
+	}
 }
 
 .btn {
@@ -417,6 +448,8 @@ $team-colours: (
 .map-all {
 	svg {
 		path {
+			cursor: pointer;
+			
 			&:hover, &:focus {
 				fill: $green;
 			}
@@ -428,12 +461,22 @@ $team-colours: (
 	.region-pins {
 		.stadium-pin {
 			position: absolute;
+			cursor: pointer;
 			width: 24px;
 			height: 24px;
 			border-radius: 100%;
 			display: block;
 			border: 2px solid $black;
 			box-shadow: 0 4px 4px rgba($black, .4);
+		}
+
+		.stadium-modal {
+			border: 5px solid $team-red;
+			background-color: $white;
+			border-radius: 25px;
+			padding: 1.75rem;
+			color: $black;
+			position: absolute;
 		}
 	}
 }

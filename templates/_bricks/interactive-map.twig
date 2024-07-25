@@ -19,28 +19,50 @@
         {% include "_svg/maps/england-and-wales.svg" %}
     </div>
 
-    <div class="map-region position-relative" style="display: none;">
+    <div class="map-region" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="mb-0" id="region-heading"></p>
+            <a class="btn btn-green show-all">Show full map</a>
+        </div>
+        
         {% set regions = craft.categories.group('regions').all() %}
 
-        {% for region in regions %}
-            <div class="region-pins {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
-                {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['region', 'teamColour']).all() %}
+        <div class="position-relative">
+            {% for region in regions %}
+                <div class="region-pins {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
+                    {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['region', 'teamColour', 'badge']).all() %}
 
-                {% for pin in stadiums %}
-                    {% set locationX = pin.left %}
-                    {% set locationY = pin.top %}
-                    {% set colour = pin.teamColour[0] %}
-                    {% set league = pin.league %}
+                    {% for pin in stadiums %}
+                        {% set locationX = pin.left %}
+                        {% set locationY = pin.top %}
+                        {% set colour = pin.teamColour[0].slug %}
+                        {% set league = pin.league %}
 
-                    <a class="stadium-pin pin-{{ colour.slug }} {{ league|kebab }}" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
-                {% endfor %}
-            </div>
-        {% endfor %}
-
-
-        <p class="float-start" id="region-heading"></p>
-        <a class="btn btn-green show-all float-end">Show full map</a>
-        <img src="/" class="img-fluid py-5 w-100 h-100">
+                        <a class="stadium-pin pin-{{ colour }} {{ league|kebab }}" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
+                    
+                        <div class="stadium-modal">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <p class="h4">{{ pin.team }}</p>
+                                    <p>Stadium: {{ pin.title }}</p>
+                                    <p>Capacity: {{ pin.capacity }}</p>
+                                    <p>Opened: {{ pin.opened }}</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="{{ pin.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-{{ colour }}" href="{{ pin.url }}">View info</a>
+                                    <a class="btn btn-{{ colour }}-outline" href="/">Get directions</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            
+            <img src="/" class="map-image img-fluid py-5 w-100 h-100">
+        </div>
     </div>
 
     <div class="labelled-switch d-flex flex-row align-items-center mb-3 toggle-colours">

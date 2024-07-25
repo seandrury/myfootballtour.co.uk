@@ -63,7 +63,7 @@ function setupMap() {
 		var newImage = "https://myfootballtour.ddev.site/assets/images/maps/" + regionId + ".svg";
 
 		$(".map-all svg").fadeOut(function() {
-			$(".map-region img").attr("src", newImage);
+			$(".map-region img.map-image").attr("src", newImage);
 			$(".map-region #region-heading").html("Showing " + regionName);
 
 			$(".map-region").fadeIn();
