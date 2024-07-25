@@ -12597,15 +12597,14 @@ footer {
   background-color: #006B04;
 }
 
-.pin-red {
+.team-red .stadium-pin {
   background-color: #c8102e;
 }
-.pin-red:hover, .pin-red:focus {
+.team-red .stadium-pin:hover, .team-red .stadium-pin:focus {
   background-color: #e48897;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-red .stadium-modal {
+  border: 5px solid #c8102e;
 }
 
 .btn-red {
@@ -12629,15 +12628,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-blue {
+.team-blue .stadium-pin {
   background-color: #034694;
 }
-.pin-blue:hover, .pin-blue:focus {
+.team-blue .stadium-pin:hover, .team-blue .stadium-pin:focus {
   background-color: #81a3ca;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-blue .stadium-modal {
+  border: 5px solid #034694;
 }
 
 .btn-blue {
@@ -12661,15 +12659,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-sky-blue {
+.team-sky-blue .stadium-pin {
   background-color: #6cabdd;
 }
-.pin-sky-blue:hover, .pin-sky-blue:focus {
+.team-sky-blue .stadium-pin:hover, .team-sky-blue .stadium-pin:focus {
   background-color: #b6d5ee;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-sky-blue .stadium-modal {
+  border: 5px solid #6cabdd;
 }
 
 .btn-sky-blue {
@@ -12693,15 +12690,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-navy-blue {
+.team-navy-blue .stadium-pin {
   background-color: #00194a;
 }
-.pin-navy-blue:hover, .pin-navy-blue:focus {
+.team-navy-blue .stadium-pin:hover, .team-navy-blue .stadium-pin:focus {
   background-color: #808ca5;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-navy-blue .stadium-modal {
+  border: 5px solid #00194a;
 }
 
 .btn-navy-blue {
@@ -12725,15 +12721,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-claret {
+.team-claret .stadium-pin {
   background-color: #6c1d45;
 }
-.pin-claret:hover, .pin-claret:focus {
+.team-claret .stadium-pin:hover, .team-claret .stadium-pin:focus {
   background-color: #b68ea2;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-claret .stadium-modal {
+  border: 5px solid #6c1d45;
 }
 
 .btn-claret {
@@ -12757,15 +12752,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-green {
+.team-green .stadium-pin {
   background-color: #004237;
 }
-.pin-green:hover, .pin-green:focus {
+.team-green .stadium-pin:hover, .team-green .stadium-pin:focus {
   background-color: #80a19b;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-green .stadium-modal {
+  border: 5px solid #004237;
 }
 
 .btn-green {
@@ -12789,15 +12783,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-yellow {
+.team-yellow .stadium-pin {
   background-color: #fff200;
 }
-.pin-yellow:hover, .pin-yellow:focus {
+.team-yellow .stadium-pin:hover, .team-yellow .stadium-pin:focus {
   background-color: #fff980;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-yellow .stadium-modal {
+  border: 5px solid #fff200;
 }
 
 .btn-yellow {
@@ -12821,15 +12814,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-gold {
+.team-gold .stadium-pin {
   background-color: #fdb913;
 }
-.pin-gold:hover, .pin-gold:focus {
+.team-gold .stadium-pin:hover, .team-gold .stadium-pin:focus {
   background-color: #fedc89;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-gold .stadium-modal {
+  border: 5px solid #fdb913;
 }
 
 .btn-gold {
@@ -12853,15 +12845,14 @@ footer {
   color: #ffffff;
 }
 
-.pin-orange {
+.team-orange .stadium-pin {
   background-color: #f68712;
 }
-.pin-orange:hover, .pin-orange:focus {
+.team-orange .stadium-pin:hover, .team-orange .stadium-pin:focus {
   background-color: #fbc389;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-orange .stadium-modal {
+  border: 5px solid #f68712;
 }
 
 .btn-orange {
@@ -12885,47 +12876,45 @@ footer {
   color: #ffffff;
 }
 
-.pin-white {
-  background-color: #ffffff;
+.team-white .stadium-pin {
+  background-color: #000000;
 }
-.pin-white:hover, .pin-white:focus {
-  background-color: white;
+.team-white .stadium-pin:hover, .team-white .stadium-pin:focus {
+  background-color: gray;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-white .stadium-modal {
+  border: 5px solid #000000;
 }
 
 .btn-white {
-  border: 3px solid #ffffff;
-  background-color: #ffffff;
+  border: 3px solid #000000;
+  background-color: #000000;
   color: #ffffff;
 }
 .btn-white:hover, .btn-white:focus, .btn-white:active {
-  border: 3px solid #ffffff;
+  border: 3px solid #000000;
   background-color: transparent;
   color: #1C1C1C;
 }
 
 .btn-white-outline {
-  border: 3px solid #ffffff;
+  border: 3px solid #000000;
   background-color: transparent;
   color: #1C1C1C;
 }
 .btn-white-outline:hover, .btn-white-outline:focus, .btn-white-outline:active {
-  background-color: #ffffff;
+  background-color: #000000;
   color: #ffffff;
 }
 
-.pin-black {
+.team-black .stadium-pin {
   background-color: #000000;
 }
-.pin-black:hover, .pin-black:focus {
+.team-black .stadium-pin:hover, .team-black .stadium-pin:focus {
   background-color: gray;
 }
-
-.pin-black {
-  background-color: #ffffff;
+.team-black .stadium-modal {
+  border: 5px solid #000000;
 }
 
 .btn-black {
@@ -12949,11 +12938,18 @@ footer {
   color: #ffffff;
 }
 
+.team-black .stadium-pin, .team-white .stadium-pin {
+  background-color: #ffffff;
+}
+
 .btn {
   padding: 4px 12px;
 }
 .btn.btn-green {
   background-color: #006B04;
+}
+.btn.btn-yellow {
+  color: #000000;
 }
 
 .nav {
@@ -13127,14 +13123,20 @@ footer {
   display: block;
   border: 2px solid #1C1C1C;
   box-shadow: 0 4px 4px rgba(28, 28, 28, 0.4);
+  z-index: 3;
 }
 .map-region .region-pins .stadium-modal {
-  border: 5px solid #c8102e;
+  display: none;
   background-color: #ffffff;
   border-radius: 25px;
   padding: 1.75rem;
   color: #1C1C1C;
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 460px;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=styles.css.map */

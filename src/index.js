@@ -76,13 +76,26 @@ function setupMap() {
 	.click(function (e) {
 		e.preventDefault();
 
-		$(".region-pins").fadeOut("500");
+		$(".region-pins").fadeOut();
+		$(".stadium-modal").fadeOut();
 
 		$(".map-region").fadeOut(function() {
 			$(".map-all svg").fadeIn();
 		})
 	});
 
+	$(".stadium-pin")
+		.unbind()
+		.click(function (e) {
+			e.preventDefault();
+			var $this = $(this);
+			
+			var id = $this.attr("id");
+
+			$(".stadium-modal").fadeOut();
+			// $(".stadium-modal." + id).removeClass("hidden");
+			$(".stadium-modal." + id).fadeIn(500);
+		})
 }
 
 $(function() {

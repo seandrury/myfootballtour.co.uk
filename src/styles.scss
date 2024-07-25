@@ -179,22 +179,25 @@ $team-colours: (
 	yellow: $team-yellow,
 	gold: $team-gold,
 	orange: $team-orange,
-	white: $team-white,
+	white: $team-black,
 	black: $team-black
 );
 
 // Loop through each color and create a class
 @each $name, $colour in $team-colours {
-  	.pin-#{$name} {
-    	background-color: $colour;
+  	
+	.team-#{$name} {
+		.stadium-pin {
+			background-color: $colour;
 
-		&:hover, &:focus {
-			background-color: mix($colour, $white);
+			&:hover, &:focus {
+				background-color: mix($colour, $white);
+			}
 		}
-  	}
 
-  	.pin-black {
-		background-color: $team-white;
+		.stadium-modal {
+			border: 5px solid $colour;
+		}
 	}
 
 	.btn-#{$name} {
@@ -221,11 +224,21 @@ $team-colours: (
 	}
 }
 
+.team-black, .team-white {
+	.stadium-pin {
+		background-color: $team-white;
+	}
+}
+
 .btn {
 	padding: 4px 12px;
 
 	&.btn-green {
 		background-color: $green;
+	}
+
+	&.btn-yellow {
+		color: $team-black;
 	}
 }
 
@@ -468,15 +481,21 @@ $team-colours: (
 			display: block;
 			border: 2px solid $black;
 			box-shadow: 0 4px 4px rgba($black, .4);
+			z-index: 3;
 		}
 
 		.stadium-modal {
-			border: 5px solid $team-red;
+			display: none;
 			background-color: $white;
 			border-radius: 25px;
 			padding: 1.75rem;
 			color: $black;
 			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			min-width: 460px;
+			z-index: 10;
 		}
 	}
 }

@@ -38,20 +38,22 @@
                         {% set colour = pin.teamColour[0].slug %}
                         {% set league = pin.league %}
 
-                        <a class="stadium-pin pin-{{ colour }} {{ league|kebab }}" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
-                    
-                        <div class="stadium-modal">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <p class="h4">{{ pin.team }}</p>
-                                    <p>Stadium: {{ pin.title }}</p>
-                                    <p>Capacity: {{ pin.capacity }}</p>
-                                    <p>Opened: {{ pin.opened }}</p>
+                        <div class="team-{{ colour }}">
+                            <a class="stadium-pin {{ league|kebab }}" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
+                        
+                            <div class="stadium-modal pin-{{ pin.id }}">
+                                <div class="d-flex flex-row">
+                                    <div class="stadium-info me-5">
+                                        <p class="h4 mb-3">{{ pin.team }}</p>
+                                        <p class="mb-0"><strong>Stadium:</strong> {{ pin.title }}</p>
+                                        <p class="mb-0"><strong>Capacity:</strong> {{ pin.capacity|number_format }}</p>
+                                        <p><strong>Opened:</strong> {{ pin.opened }}</p>
+                                    </div>
+                                    <div class="team-logo ms-5">
+                                        <img src="{{ pin.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
+                                    </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <img src="{{ pin.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row justify-content-between">
                                     <a class="btn btn-{{ colour }}" href="{{ pin.url }}">View info</a>
                                     <a class="btn btn-{{ colour }}-outline" href="/">Get directions</a>
                                 </div>
