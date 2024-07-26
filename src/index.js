@@ -85,17 +85,31 @@ function setupMap() {
 	});
 
 	$(".stadium-pin")
-		.unbind()
-		.click(function (e) {
-			e.preventDefault();
-			var $this = $(this);
-			
-			var id = $this.attr("id");
+	.unbind()
+	.click(function (e) {
+		e.preventDefault();
+		var $this = $(this);
+		
+		var id = $this.attr("id");
 
-			$(".stadium-modal").fadeOut();
-			// $(".stadium-modal." + id).removeClass("hidden");
-			$(".stadium-modal." + id).fadeIn(500);
-		})
+		$(".stadium-modal").fadeOut();
+		// $(".stadium-modal." + id).removeClass("hidden");
+		$(".stadium-modal." + id).fadeIn(500);
+	});
+
+	$("#select-leagues input[type='checkbox']").change(function() {
+		var $this = $(this);
+		var league = $this.attr("name");
+
+		$(".stadium-modal").fadeOut();
+
+		if(this.checked) {
+			$("." + league + " .stadium-pin").removeClass('d-none');
+		}
+		else {
+			$("." + league + " .stadium-pin").addClass('d-none');
+		}
+	});
 }
 
 $(function() {

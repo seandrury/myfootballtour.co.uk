@@ -38,8 +38,8 @@
                         {% set colour = pin.teamColour[0].slug %}
                         {% set league = pin.league %}
 
-                        <div class="team-{{ colour }}">
-                            <a class="stadium-pin {{ league|kebab }}" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
+                        <div class="stadium-details {{ league|kebab }} team-{{ colour }}">
+                            <a class="stadium-pin" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
                         
                             <div class="stadium-modal pin-{{ pin.id }}">
                                 <div class="d-flex flex-row">
