@@ -3,7 +3,7 @@ format: null
 handle: clubCrest
 height: 100
 interlace: none
-mode: crop
+mode: fit
 name: 'Club crest'
 position: center-center
 quality: null

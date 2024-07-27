@@ -22,7 +22,7 @@
     <div class="map-region" style="display: none;">
         <div class="d-flex justify-content-between align-items-center">
             <p class="mb-0" id="region-heading"></p>
-            <a class="btn btn-green show-all">Show full map</a>
+            <a class="btn btn-sm btn-primary show-all">Show full map</a>
         </div>
         
         {% set regions = craft.categories.group('regions').all() %}
@@ -30,7 +30,7 @@
         <div class="position-relative">
             {% for region in regions %}
                 <div class="region-pins {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
-                    {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['region', 'teamColour', 'badge']).all() %}
+                    {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['teamColour', 'badge']).all() %}
 
                     {% for pin in stadiums %}
                         {% set locationX = pin.left %}
@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="d-flex flex-row justify-content-between">
                                     <a class="btn btn-{{ colour }}" href="{{ pin.url }}">View info</a>
-                                    <a class="btn btn-{{ colour }}-outline" href="/">Get directions</a>
+                                    <a class="btn btn-outline-{{ colour }}" href="/">Get directions</a>
                                 </div>
                             </div>
                         </div>
@@ -64,6 +64,41 @@
             {% endfor %}
             
             <img src="/" class="map-image img-fluid py-5 w-100 h-100">
+
+            {% for region in regions %}
+                <div class="region-teams my-2 {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
+                    {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['teamColour', 'badge']).orderby("team ASC") %}
+
+                    <p class="mb-5">Teams in this region:</p>
+
+                    <div class="row">
+                        {% for team in stadiums %}
+                            {% set colour = team.teamColour[0].slug %}
+                            {% set league = team.league %}
+
+                            <div class="col-md-6">
+                                <div class="team-card bg-white position-relative">
+                                    <div class="team-{{ team.id }}">
+                                        <div class="d-flex flex-row">
+                                            <div class="team-info bg-{{ colour }} p-4 w-100">
+                                                <a class="stretched-link h5 mb-0" href="{{ team.url }}">{{ team.team }}</a>
+                                                <p class="mb-0">{{ team.title }}</p>
+                                            </div>
+                                            <div class="team-logo p-3 my-auto">
+                                                <img src="{{ team.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% if loop.index is divisible by(2) %}
+                                <div class="clearfix my-2"></div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 

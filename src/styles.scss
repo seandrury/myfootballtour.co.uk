@@ -65,11 +65,29 @@ $team-orange: #f68712;
 $team-white: $white;
 $team-black: #000000;
 
+$primary: $green;
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary,
+  "red": $team-red,
+  "blue": $team-blue,
+  "sky-blue": $team-sky-blue,
+  "navy-blue": $team-navy-blue,
+  "claret": $team-claret,
+  "green": $team-green,
+  "yellow": $team-yellow,
+  "gold": $team-gold,
+  "orange": $team-orange,
+  "white": $team-white,
+  "black": $team-black
+));
+
 $body-bg: $black;
 $body-color: $white;
 
 $link-color: $white;
-$link-decoration: underline;
+$link-decoration: none;
 $link-hover-color: $green;
 $link-hover-decoration: none;
 
@@ -153,16 +171,13 @@ $enable-cssgrid: true;
 @import "../node_modules/bootstrap/scss/pagination";
 @import "../node_modules/bootstrap/scss/close";
 @import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/tooltip";
 
 @import "../node_modules/bootstrap/scss/helpers";
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 body {
 	color: $body-color;
-
-	.test {
-		color: $body-color;
-	}
 }
 
 footer {
@@ -200,33 +215,39 @@ $team-colours: (
 		}
 	}
 
-	.btn-#{$name} {
-		border: 3px solid $colour;
-		background-color: $colour;
-		color: $white;
+	// .btn-#{$name} {
+	// 	border: 3px solid $colour;
+	// 	background-color: $colour;
+	// 	color: $white;
 
-		&:hover, &:focus, &:active {
-			border: 3px solid $colour;
-			background-color: transparent;
-			color: $black;
-		}
-	}
+	// 	&:hover, &:focus, &:active {
+	// 		border: 3px solid $colour;
+	// 		background-color: transparent;
+	// 		color: $black;
+	// 	}
+	// }
 
-	.btn-#{$name}-outline {
-		border: 3px solid $colour;
-		background-color: transparent;
-		color: $black;
+	// .btn-#{$name}-outline {
+	// 	border: 3px solid $colour;
+	// 	background-color: transparent;
+	// 	color: $black;
 
-		&:hover, &:focus, &:active {
-			background-color: $colour;
-			color: $white;
-		}
-	}
+	// 	&:hover, &:focus, &:active {
+	// 		background-color: $colour;
+	// 		color: $white;
+	// 	}
+	// }
 }
 
 .team-black, .team-white {
 	.stadium-pin {
 		background-color: $team-white;
+	}
+}
+
+.bg-yellow {
+	p, a {
+		color: $black;
 	}
 }
 
@@ -388,7 +409,8 @@ $team-colours: (
 	}
 }
 
-// .accessibility-mode {
+.accessibility-mode {
+
 // 	.map-region {
 // 		.region-pins {
 // 			.stadium-pin {
@@ -402,7 +424,7 @@ $team-colours: (
 // 			}
 // 		}
 // 	}
-// }
+}
 
 .labelled-switch {
 	gap: 1rem;
@@ -459,12 +481,40 @@ $team-colours: (
 }
 
 .map-all {
-	svg {
+	svg {		
 		path {
 			cursor: pointer;
-			
-			&:hover, &:focus {
-				fill: $green;
+
+			&.blue {
+				fill: mix($team-blue, $white);
+
+				&:hover, &:focus {
+					fill: $team-blue;
+				}
+			}
+
+			&.green {
+				fill: mix($tick-green, $white);
+
+				&:hover, &:focus {
+					fill: $tick-green;
+				}
+			}
+
+			&.red {
+				fill: mix($team-red, $white);
+
+				&:hover, &:focus {
+					fill: $team-red;
+				}
+			}
+
+			&.gold {
+				fill: mix($team-gold, $white);
+
+				&:hover, &:focus {
+					fill: $team-gold;
+				}
 			}
 		}
 	}
@@ -496,6 +546,20 @@ $team-colours: (
 			transform: translate(-50%, -50%);
 			min-width: 460px;
 			z-index: 10;
+		}
+	}
+
+	.region-teams {
+		.team-card {
+			border-radius: 25px;
+			border: 5px solid $team-white;
+			overflow: hidden;
+
+			.team-info {
+				&.bg-white {
+					color: $black;
+				}
+			}
 		}
 	}
 }

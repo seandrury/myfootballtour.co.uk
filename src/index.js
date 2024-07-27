@@ -68,8 +68,31 @@ function setupMap() {
 
 			$(".map-region").fadeIn();
 			$(".region-pins." + regionId).fadeIn("500");
+			$(".region-teams." + regionId).fadeIn("500");
 		})
-	});
+	})
+	// .hover(function() {
+	// 	$(".interactive-map .clickable-region").css("fill","#ffffff")
+	// 	$(this).css("fill","")
+
+		
+	// });
+
+	// $(".clickable-region").hover(function() {
+    //     // On hover
+    //     $(".clickable-region").not(this).addClass("inactive");
+
+	// 	$(this).addClass("active");
+    // }, function() {
+    //     // On mouse leave
+    //     $(".clickable-region").removeClass("active");
+    // });
+
+    // $("#map-all").mouseleave(function() {
+    //     // When the mouse leaves the SVG
+    //     $(".clickable-region").removeClass("active");
+	// 	$(".clickable-region").removeClass("inactive");
+    // });
 
 	$(".map-region .show-all")
 	.unbind()
@@ -77,6 +100,7 @@ function setupMap() {
 		e.preventDefault();
 
 		$(".region-pins").fadeOut();
+		$(".region-teams").fadeOut();
 		$(".stadium-modal").fadeOut();
 
 		$(".map-region").fadeOut(function() {
@@ -110,6 +134,8 @@ function setupMap() {
 			$("." + league + " .stadium-pin").addClass('d-none');
 		}
 	});
+
+
 }
 
 $(function() {
