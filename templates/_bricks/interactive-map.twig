@@ -43,7 +43,7 @@
                         
                             <div class="stadium-modal pin-{{ pin.id }}">
                                 <div class="d-flex flex-row">
-                                    <div class="stadium-info me-5">
+                                    <div class="stadium-info me-auto">
                                         <p class="h4 mb-3">{{ pin.team }}</p>
                                         <p class="mb-0"><strong>Stadium:</strong> {{ pin.title }}</p>
                                         <p class="mb-0"><strong>Capacity:</strong> {{ pin.capacity|number_format }}</p>
@@ -66,35 +66,29 @@
             <img src="/" class="map-image img-fluid py-5 w-100 h-100">
 
             {% for region in regions %}
-                <div class="region-teams my-2 {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
+                <div class="region-teams mt-2 mb-5 {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
                     {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['teamColour', 'badge']).orderby("team ASC") %}
 
                     <p class="mb-5">Teams in this region:</p>
 
-                    <div class="row">
+                    <div class="grid" style="gap: 20px">
                         {% for team in stadiums %}
                             {% set colour = team.teamColour[0].slug %}
                             {% set league = team.league %}
 
-                            <div class="col-md-6">
-                                <div class="team-card bg-white position-relative">
-                                    <div class="team-{{ team.id }}">
-                                        <div class="d-flex flex-row">
-                                            <div class="team-info bg-{{ colour }} p-4 w-100">
-                                                <a class="stretched-link h5 mb-0" href="{{ team.url }}">{{ team.team }}</a>
-                                                <p class="mb-0">{{ team.title }}</p>
-                                            </div>
-                                            <div class="team-logo p-3 my-auto">
-                                                <img src="{{ team.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
-                                            </div>
+                            <div class="team-card team-{{ team.id }} bg-white position-relative d-flex">
+                                <div class="d-flex flex-row w-100">
+                                    <div class="team-info bg-{{ colour }} p-4 w-100 d-flex align-items-center">
+                                        <div class="text">
+                                            <a class="stretched-link h5 mb-0" href="{{ team.url }}">{{ team.team }}</a>
+                                            <p class="mb-0">{{ team.title }}</p>
                                         </div>
+                                    </div>
+                                    <div class="team-logo p-3 my-auto">
+                                        <img src="{{ team.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
-
-                            {% if loop.index is divisible by(2) %}
-                                <div class="clearfix my-2"></div>
-                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>

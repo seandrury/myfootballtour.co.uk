@@ -542,8 +542,9 @@ $team-colours: (
 			color: $black;
 			position: absolute;
 			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
+			// top: 50%;
+			top: 100px;
+			transform: translate(-50%,0);
 			min-width: 460px;
 			z-index: 10;
 		}
@@ -562,4 +563,8 @@ $team-colours: (
 			}
 		}
 	}
+}
+
+.grid {
+	grid-template-columns: 1fr 1fr;
 }
