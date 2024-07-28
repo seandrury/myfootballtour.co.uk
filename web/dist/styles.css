@@ -13821,7 +13821,7 @@ footer {
   padding-right: 5px;
 }
 
-.grid {
+.team-list {
   grid-template-columns: 1fr 1fr;
 }
 
@@ -13871,11 +13871,11 @@ footer {
   }
 }
 
-#select-leagues .form-control {
+.form-control {
   border: none;
   gap: 1.5rem;
 }
-#select-leagues .form-control input[type=checkbox] {
+.form-control input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
@@ -13888,7 +13888,7 @@ footer {
   display: grid;
   place-content: center;
 }
-#select-leagues .form-control input[type=checkbox]:before {
+.form-control input[type=checkbox]:before {
   content: "";
   width: 0.75rem;
   height: 1.5rem;
@@ -13899,11 +13899,25 @@ footer {
   transform: translate(-2px, -2px);
   display: none;
 }
-#select-leagues .form-control input[type=checkbox]:checked {
+.form-control input[type=checkbox]:checked {
   background-color: #11D100;
 }
-#select-leagues .form-control input[type=checkbox]:checked:before {
+.form-control input[type=checkbox]:checked:before {
   display: block;
+}
+.form-control input[type=text] {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 6px 10px;
+}
+.form-control input[type=text]:focus {
+  outline: none;
+}
+.form-control input[type=text] ~ span {
+  position: absolute;
+  right: 16px;
+  top: 11px;
 }
 
 .league-colours #select-leagues .form-control input[type=checkbox]:checked#premier-league {

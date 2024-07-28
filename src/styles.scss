@@ -274,7 +274,7 @@ $team-colours: (
 	}
 }
 
-.grid {
+.team-list {
 	grid-template-columns: 1fr 1fr;
 }
 
@@ -338,7 +338,7 @@ $team-colours: (
 	}
 }
 
-#select-leagues {
+// #select-leagues {
 	.form-control {
 		border: none;
 		gap: 1.5rem;
@@ -376,8 +376,25 @@ $team-colours: (
 			  	}
 			}
 		}
+
+		input[type="text"] {
+			background-color: transparent;
+			border: 3px solid $white;
+			color: $white;
+			padding: 6px 10px;
+
+			&:focus {
+				outline: none;
+			}
+
+			~ span {
+				position: absolute;
+				right: 16px;
+				top: 11px;
+			}
+		}
 	}
-}
+// }
 
 .league-colours {
 	#select-leagues {
