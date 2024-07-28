@@ -93,6 +93,18 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: 22551e37-4303-4127-9d5b-d5ae046c6f61 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c55c33cb-ae1f-45ad-8a34-11d940500379
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: ea3899cc-7f6f-4358-a8b4-d8da24f2e4e0 # Gallery
             instructions: null
             label: null
@@ -189,6 +201,48 @@ fieldLayouts:
             width: 50
         name: Team
         uid: 3c09cae6-37bd-46ee-a4bd-b640da118351
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 80bcbdd9-48fe-43df-98b6-e819bef2c02c # Google Maps
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7499a156-95b4-4c52-921a-04cc22f7c2a6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b1ba8641-37f0-479a-8bf4-202546e2f8f1 # Club website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 51de38bf-7a74-4d40-afa4-67cf46de846f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa2bd121-7363-4b83-ba39-5ab043f95b1b # Wikipedia
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb268375-0b11-4d69-9a87-3b13b015d7d5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Links
+        uid: 3f7f28ad-5117-42d2-800c-3f8c4d79ae80
         userCondition: null
       -
         elementCondition: null

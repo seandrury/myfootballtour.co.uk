@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: stadiumsHome
+name: 'Stadiums Home'
+propagationMethod: all
+siteSettings:
+  4a316ab3-49ff-4925-aada-2e783ce740ae: # myfootballtour.co.uk
+    enabledByDefault: true
+    hasUrls: true
+    template: stadiums/_index
+    uriFormat: stadiums
+type: single

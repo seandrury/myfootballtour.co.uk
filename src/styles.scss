@@ -88,8 +88,8 @@ $body-color: $white;
 
 $link-color: $white;
 $link-decoration: none;
-$link-hover-color: $green;
-$link-hover-decoration: none;
+$link-hover-color: $white;
+$link-hover-decoration: underline;
 
 $min-contrast-ratio: 3;
 
@@ -261,6 +261,21 @@ $team-colours: (
 	&.btn-yellow {
 		color: $team-black;
 	}
+}
+
+.breadcrumb {
+	>li+li {
+		&:before {
+			color: $team-white;
+			content: "/\00a0";
+			padding-left: 8px;
+			padding-right: 5px;
+		}
+	}
+}
+
+.grid {
+	grid-template-columns: 1fr 1fr;
 }
 
 .nav {
@@ -573,6 +588,37 @@ $team-colours: (
 	}
 }
 
-.grid {
-	grid-template-columns: 1fr 1fr;
+.related-stadiums {
+	.card {
+		figure {
+			border-radius: 25px;
+			overflow: hidden;
+
+			a {
+				color: $team-white;
+			}
+		
+			figcaption {
+				bottom: 0;
+				padding: 1rem;
+				background: linear-gradient(0deg, $team-black 50%, rgba($team-black, 0) 100%);
+				border-radius: 0 0 25px 25px;
+			}
+
+			img {
+				-webkit-transition: all .5s ease;
+				-moz-transition: all .5s ease;
+				-o-transition: all .5s ease;
+				-ms-transition: all .5s ease;
+				transition: all .5s ease;
+			}
+
+			&:hover, &:focus {
+				img {
+					-webkit-filter: brightness(70%);
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
 }

@@ -1,10 +1,10 @@
-columnSuffix: grbxqszi
+columnSuffix: null
 contentColumnType: text
 fieldGroup: 6c8c42c3-05c3-459d-8541-0e851ec675ac # Stadiums
 handle: team
 instructions: 'The team that primarily plays its home games at the stadium.'
 name: Team
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

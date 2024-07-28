@@ -1,4 +1,4 @@
-dateModified: 1722119069
+dateModified: 1722190542
 elementSources:
   craft\elements\Category:
     -
@@ -92,7 +92,8 @@ meta:
     02f114bd-d885-4d9d-9d23-b33fc220000e: 'Meta Description' # Meta Description
     3af9253e-53bd-40da-b9ff-f7ab98a669f3: Capacity # Capacity
     4a316ab3-49ff-4925-aada-2e783ce740ae: myfootballtour.co.uk # myfootballtour.co.uk
-    6b146246-521b-46a8-a283-c6bc97088480: Globals # Globals
+    4b7d6748-f9e7-4f63-9d59-25f3f3fb8cfb: 'Stadiums Home' # Stadiums Home
+    6b146246-521b-46a8-a283-c6bc97088480: 'Default images' # Default images
     6c8c42c3-05c3-459d-8541-0e851ec675ac: Stadiums # Stadiums
     6dfa1059-e895-490e-8a03-b286ac3f1bc1: Default # Default
     07b10073-b192-44fb-ba57-71b3198ea2e0: Common # Common
@@ -103,7 +104,9 @@ meta:
     9fec835e-6354-48be-a311-ef98bd2ec6a8: Top # Top
     13e8c0aa-c675-43d6-9443-8d93e3bd5b80: Stadiums # Stadiums
     16b4ecbb-1c20-4583-b6bb-ea5ca8c3c576: Contact # Contact
+    34a92e62-c13b-4922-aab2-db3e72a0d14e: 'Stadiums Home' # Stadiums Home
     69bafa99-be37-49ec-a361-4ba06906c386: Simple # Simple
+    80bcbdd9-48fe-43df-98b6-e819bef2c02c: 'Google Maps' # Google Maps
     87ba3899-10a7-42c3-862f-eefec96e9753: 'Map image' # Map image
     92ff8290-8a29-43bf-9c83-024d958c06e7: Navigation # Navigation
     0123a4e4-2c99-4e36-b5cc-4dcb577b63a3: Team # Team
@@ -117,8 +120,10 @@ meta:
     324611ef-56d7-4b2d-bdbd-aad65b3c18fb: Navigation # Navigation
     654927ee-6ba5-4bad-8173-01b520580d6b: Opened # Opened
     5878131a-7dba-477f-b0d6-902fa8722fda: League # League
+    aa2bd121-7363-4b83-ba39-5ab043f95b1b: Wikipedia # Wikipedia
     aad8776b-64a8-4298-925c-f7e998de33f9: Closing # Closing
     aaec7dbc-0bbb-4b12-9947-4b02335e61b7: 'Meta Title' # Meta Title
+    b1ba8641-37f0-479a-8bf4-202546e2f8f1: 'Club website' # Club website
     c00bb2ae-23ed-4ea3-9980-2bb84200e929: Regions # Regions
     c044d02d-94fc-4b3a-8da7-e7a82a5963f3: Pages # Pages
     c570e08f-a17f-43b1-bf34-a61b09e2ca67: 'Club crest' # Club crest

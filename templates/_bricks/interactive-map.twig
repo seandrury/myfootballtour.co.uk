@@ -63,8 +63,11 @@
                                     </div>
                                 </div>
                                 <div class="d-flex flex-row justify-content-between">
+                                    {% set googleMapsTitle = "https://www.google.com/maps?saddr=My+Location&daddr=" ~ pin.title|lower|replace(" ","+") %}
+                                    {% set googleMapsLink = pin.googleMaps ?? googleMapsTitle ?? null %}
+
                                     <a class="btn btn-{{ colour }}" href="{{ pin.url }}">View info</a>
-                                    <a class="btn btn-outline-{{ colour }}" href="/">Get directions</a>
+                                    <a class="btn btn-outline-{{ colour }}" href="{{ googleMapsLink }}">Get directions</a>
                                 </div>
                             </div>
                         </div>

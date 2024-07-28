@@ -1,0 +1,14 @@
+columnSuffix: lwcajtnd
+contentColumnType: string(255)
+fieldGroup: 6c8c42c3-05c3-459d-8541-0e851ec675ac # Stadiums
+handle: wikipedia
+instructions: null
+name: Wikipedia
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

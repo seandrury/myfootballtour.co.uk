@@ -1,0 +1,113 @@
+{% extends "_layouts/main" %}
+
+{% block content %}
+
+    {% set largeCrest = {
+        mode: 'fit',
+        width: 300,
+        height: 300,
+        quality: 80,
+        position: 'top-center'
+    } %}
+    {% set photo = {
+        mode: 'crop',
+        width: 480,
+        height: 360,
+        quality: 80,
+        position: 'center-center'
+    } %}
+
+    {% set colour = entry.teamColour.one.slug %}
+
+    <div class="container py-large">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-8 offset-md-2">
+                <div class="row mb-8">
+                    <div class="col-12">
+                        <ol class="list-unstyled list-inline breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/stadiums">Stadiums</a></li>
+                            <li>{{ entry.title }}</li>
+                        </ol>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <h1 class="mb-5">{{ entry.title }}</h1>
+                        <p class="fs-3">{{ entry.team }}</p>
+                        <p class="fs-5"><strong>Capacity:</strong> {{ entry.capacity|number_format }}</p>
+                        {% if entry.league is defined and entry.league != '' %}
+                            <p class="fs-5"><strong>League:</strong> {{ entry.league.label }}</p>
+                        {% endif %}
+                        {% if entry.opened is defined and entry.opened != '' %}
+                            <p class="fs-5"><strong>Opened:</strong> {{ entry.opened }}</p>
+                        {% endif %}
+                        {% if entry.closing is defined and entry.closing != '' %}
+                            <p class="fs-5"><strong>Closing:</strong> {{ entry.closing }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="{{ entry.badge[0].getUrl(largeCrest) ?? '' }}" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="row mb-8">
+                    <div class="col-12 col-md-8">
+                        {{ entry.body|replace("<p>","<p class='fs-5'>")|raw }}
+                    </div>
+                    <div class="col-12 col-md-4 d-flex flex-column">
+                        {% set googleMapsTitle = "https://www.google.com/maps?saddr=My+Location&daddr=" ~ entry.title|lower|replace(" ","+") %}
+                        {% set googleMapsLink = entry.googleMaps ?? googleMapsTitle ?? null %}
+                        {% set wikipediaTitle = "https://en.wikipedia.org/wiki/" ~ entry.team|replace(" ","_") ~ "_F.C." %}
+                        {% set wikipediaLink = entry.wikipedia ?? wikipediaTitle ?? null %}
+
+                        <a href="{{ googleMapsLink }}" class="btn btn-{{ colour }} my-2">Google Maps</a>
+                        {% if entry.clubWebsite is defined and entry.clubWebsite != '' %}
+                            <a href="{{ entry.clubWebsite }}" class="btn btn-{{ colour }} my-2">Club website</a>
+                        {% endif %}
+                        <a href="{{ wikipediaLink }}" class="btn btn-{{ colour }} my-2">Wikipedia</a>
+                    </div>
+                </div>
+
+                {% if entry.gallery is defined and entry.gallery|length > 0 %}
+                <div class="row mb-8">
+                    <div class="col-12">
+                        <h2 class="mb-large">Gallery</h2>
+                    </div>
+
+                    <div class="col-12 col-md-8 offset-md-2">
+                        <img src="{{ entry.gallery[0].getUrl(photo) }}" class="img-fluid">
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="row related-stadiums">
+                    <div class="col-12">
+                        {% set relatedStadiums = craft.entries.section('stadiums').relatedTo(entry.region).id("not " ~ entry.id).orderBy("team ASC").all %}
+                        
+                        <h2 class="mb-5">Other stadiums in {{ entry.region.one.title }}</h2>
+
+                        <div class="row">
+                            {% for stadium in relatedStadiums %}
+                                {% set image = stadium.gallery[0] ?? defaultImages.mainStadiumImage[0] ?? null %}
+                                
+                                <div class="col-12 col-md-6">
+                                    <div class="card position-relative">
+                                        <figure class="mb-0">
+                                            <img src="{{ image.getUrl(photo) }}" class="img-fluid">
+                                            <a href="{{ stadium.url }}" class="stretched-link" aria-label="{{ stadium.title }}">
+                                            <figcaption class="position-absolute w-100">
+                                                <p class="h5 stretched-link">{{ stadium.title }}</p>
+                                                <p class="mb-0">{{ stadium.team }}</p>
+                                            </figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

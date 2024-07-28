@@ -114,9 +114,9 @@
   --bs-link-color: #ffffff;
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-decoration: none;
-  --bs-link-hover-color: #006B04;
-  --bs-link-hover-color-rgb: 0, 107, 4;
-  --bs-link-hover-decoration: none;
+  --bs-link-hover-color: #ffffff;
+  --bs-link-hover-color-rgb: 255, 255, 255;
+  --bs-link-hover-decoration: underline;
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
@@ -377,7 +377,7 @@ a {
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3451,6 +3451,7 @@ textarea.form-control-lg {
 }
 .btn:hover {
   color: var(--bs-btn-hover-color);
+  text-decoration: none;
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
@@ -4152,7 +4153,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .btn-link:hover, .btn-link:focus-visible {
-  text-decoration: none;
+  text-decoration: underline;
 }
 .btn-link:focus-visible {
   color: var(--bs-btn-color);
@@ -4481,6 +4482,7 @@ textarea.form-control-lg {
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: var(--bs-dropdown-link-hover-color);
+  text-decoration: none;
   background-color: var(--bs-dropdown-link-hover-bg);
 }
 .dropdown-item.active, .dropdown-item:active {
@@ -4560,6 +4562,7 @@ textarea.form-control-lg {
 }
 .nav-link:hover, .nav-link:focus {
   color: var(--bs-nav-link-hover-color);
+  text-decoration: none;
 }
 .nav-link:focus-visible {
   outline: 0;
@@ -4713,6 +4716,7 @@ textarea.form-control-lg {
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
+  text-decoration: none;
 }
 
 .navbar-nav {
@@ -5166,6 +5170,9 @@ textarea.form-control-lg {
   margin-bottom: 0;
 }
 
+.card-link:hover {
+  text-decoration: none;
+}
 .card-link + .card-link {
   margin-left: var(--bs-card-spacer-x);
 }
@@ -5491,6 +5498,7 @@ textarea.form-control-lg {
 .page-link:hover {
   z-index: 2;
   color: var(--bs-pagination-hover-color);
+  text-decoration: none;
   background-color: var(--bs-pagination-hover-bg);
   border-color: var(--bs-pagination-hover-border-color);
 }
@@ -13806,6 +13814,17 @@ footer {
   color: #000000;
 }
 
+.breadcrumb > li + li:before {
+  color: #ffffff;
+  content: "/ ";
+  padding-left: 8px;
+  padding-right: 5px;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr;
+}
+
 .nav {
   position: fixed;
   z-index: 1030;
@@ -14022,8 +14041,29 @@ footer {
   color: #1C1C1C;
 }
 
-.grid {
-  grid-template-columns: 1fr 1fr;
+.related-stadiums .card figure {
+  border-radius: 25px;
+  overflow: hidden;
+}
+.related-stadiums .card figure a {
+  color: #ffffff;
+}
+.related-stadiums .card figure figcaption {
+  bottom: 0;
+  padding: 1rem;
+  background: linear-gradient(0deg, #000000 50%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 0 0 25px 25px;
+}
+.related-stadiums .card figure img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.related-stadiums .card figure:hover img, .related-stadiums .card figure:focus img {
+  -webkit-filter: brightness(70%);
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=styles.css.map */

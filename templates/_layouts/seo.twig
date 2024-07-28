@@ -1,6 +1,6 @@
 {% set seoTitle = entry.metaTitle ?? entry.heading ?? entry.title ?? null %}
 {% set seoDescription = entry.metaDescription ? entry.metaDescription : entry.body|length > 150 ? entry.body|striptags|slice(0, 150) ~ '...' : entry.body|striptags %}
-{% set seoImage = entry.socialShare.one ?? globals.defaultSocialShare.one ?? null %}
+{% set seoImage = entry.socialShare.one ?? defaultImages.defaultSocialShare.one ?? null %}
 
 {% set seo = craft.seo.custom(
     seoTitle,

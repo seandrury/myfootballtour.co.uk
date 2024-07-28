@@ -12,13 +12,25 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cecad645-6978-4b34-8912-14425287cf47
+            uid: b6d3725d-ac61-4996-bf8f-95cbb0f58b15
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 985f822c-337b-406b-b800-dfb08fd1513a # Main stadium image
+            instructions: null
+            label: 'Default stadium image'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e80b734a-31a2-4ee2-9cf4-2e4f597f5c84
             userCondition: null
             warning: null
             width: 100
         name: Defaults
         uid: c4b217ee-950a-48fa-b8d0-0bb2cf348470
         userCondition: null
-handle: globals
-name: Globals
+handle: defaultImages
+name: 'Default images'
 sortOrder: 1
