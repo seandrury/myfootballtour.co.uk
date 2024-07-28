@@ -117,9 +117,21 @@ function setupMap() {
 		var id = $this.attr("id");
 
 		$(".stadium-modal").fadeOut();
-		// $(".stadium-modal." + id).removeClass("hidden");
 		$(".stadium-modal." + id).fadeIn(500);
 	});
+
+	$(".team-card .team-info a")
+	.unbind()
+	.click(function (e) {
+		e.preventDefault();
+		var $this = $(this);
+		
+		var id = $this.attr("id");
+
+		$(".stadium-modal").fadeOut();
+		$(".stadium-modal." + id).fadeIn(500);
+		document.getElementById("map-region").scrollIntoView();
+	})
 
 	$("#select-leagues input[type='checkbox']").change(function() {
 		var $this = $(this);
@@ -129,9 +141,11 @@ function setupMap() {
 
 		if(this.checked) {
 			$("." + league + " .stadium-pin").removeClass('d-none');
+			$("." + league + ".team-card").removeClass('d-none');
 		}
 		else {
 			$("." + league + " .stadium-pin").addClass('d-none');
+			$("." + league + ".team-card").addClass('d-none');
 		}
 	});
 

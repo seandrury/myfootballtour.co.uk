@@ -95,11 +95,9 @@ $min-contrast-ratio: 3;
 
 $text-readability: 100%;
 
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Poetsen+One&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@400,700;1&family=Poetsen+One&display=swap');
-
-$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-sans-serif: "ABeeZee", sans-serif;
 $font-family-monospace: null;
 $headings-font-family: "Poetsen One", sans-serif;
 
@@ -121,6 +119,8 @@ $line-height-sm: 1.25;
 $line-height-base: 1.5;
 $line-height-lg: 1.75;
 
+$font-size-base: 1rem;
+
 $h1-font-size: $font-size-base * 3;
 $h2-font-size: $font-size-base * 2.25;
 $h3-font-size: $font-size-base * 2;
@@ -129,8 +129,6 @@ $h5-font-size: $font-size-base * 1.5;
 
 $display-font-weight: $font-weight-normal;
 $display-line-height: $line-height-lg;
-
-$font-size-base: 1rem;
 
 $btn-border-width: 3px;
 $btn-box-shadow: none;
@@ -199,14 +197,22 @@ $team-colours: (
 );
 
 // Loop through each color and create a class
-@each $name, $colour in $team-colours {
+@each $name, $colour in $theme-colors {
   	
 	.team-#{$name} {
 		.stadium-pin {
 			background-color: $colour;
 
 			&:hover, &:focus {
-				background-color: mix($colour, $white);
+				background-color: mix($colour, $black);
+			}
+		}
+
+		.team-info {
+			background-color: $colour;
+
+			&:hover, &:focus {
+				background-color: darken($colour, 10%);
 			}
 		}
 
@@ -214,40 +220,34 @@ $team-colours: (
 			border: 5px solid $colour;
 		}
 	}
-
-	// .btn-#{$name} {
-	// 	border: 3px solid $colour;
-	// 	background-color: $colour;
-	// 	color: $white;
-
-	// 	&:hover, &:focus, &:active {
-	// 		border: 3px solid $colour;
-	// 		background-color: transparent;
-	// 		color: $black;
-	// 	}
-	// }
-
-	// .btn-#{$name}-outline {
-	// 	border: 3px solid $colour;
-	// 	background-color: transparent;
-	// 	color: $black;
-
-	// 	&:hover, &:focus, &:active {
-	// 		background-color: $colour;
-	// 		color: $white;
-	// 	}
-	// }
 }
 
-.team-black, .team-white {
+.team-black {
 	.stadium-pin {
 		background-color: $team-white;
+
+		&:hover, &:focus {
+			background-color: mix($team-black, $team-white);
+		}
+	}
+
+	.team-info {
+		&:hover, &:focus {
+			background-color: lighten($team-black, 25%);
+		}
 	}
 }
 
-.bg-yellow {
+.team-yellow, .team-white {
 	p, a {
 		color: $black;
+	}
+}
+
+.team-white {
+	.stadium-modal {
+		border-color: $team-black;
+
 	}
 }
 
@@ -391,18 +391,26 @@ $team-colours: (
 
 	.map-region {
 		.region-pins {
-			.stadium-pin {
+			.stadium-details {
 				&.premier-league {
-					background-color: $premier-league;
+					.stadium-pin {
+						background-color: $premier-league;
+					}	
 				}
 				&.championship {
-					background-color: $championship;
+					.stadium-pin {
+						background-color: $championship;
+					}	
 				}
 				&.league-one {
-					background-color: $league-one;
+					.stadium-pin {
+						background-color: $league-one;
+					}	
 				}
 				&.league-two {
-					background-color: $league-two;
+					.stadium-pin {
+						background-color: $league-two;
+					}	
 				}
 			}
 		}
@@ -543,7 +551,7 @@ $team-colours: (
 			position: absolute;
 			left: 50%;
 			// top: 50%;
-			top: 100px;
+			top: 250px;
 			transform: translate(-50%,0);
 			min-width: 460px;
 			z-index: 10;

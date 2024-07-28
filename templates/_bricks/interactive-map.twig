@@ -19,7 +19,7 @@
         {% include "_svg/maps/england-and-wales.svg" %}
     </div>
 
-    <div class="map-region" style="display: none;">
+    <div class="map-region" id="map-region" style="display: none;">
         <div class="d-flex justify-content-between align-items-center">
             <p class="mb-0" id="region-heading"></p>
             <a class="btn btn-sm btn-primary show-all">Show full map</a>
@@ -38,16 +38,25 @@
                         {% set colour = pin.teamColour[0].slug %}
                         {% set league = pin.league %}
 
+                        {% if colour == "white" %}
+                            {% set colour = "black" %}
+                        {% endif %}
+
                         <div class="stadium-details {{ league|kebab }} team-{{ colour }}">
                             <a class="stadium-pin" style="left:{{ locationX }}% ; top:{{ locationY }}%;" id="pin-{{ pin.id }}" title="View {{ pin.title }}"></a>
                         
                             <div class="stadium-modal pin-{{ pin.id }}">
                                 <div class="d-flex flex-row">
-                                    <div class="stadium-info me-auto">
+                                    <div class="stadium-info mb-3 me-auto">
                                         <p class="h4 mb-3">{{ pin.team }}</p>
                                         <p class="mb-0"><strong>Stadium:</strong> {{ pin.title }}</p>
                                         <p class="mb-0"><strong>Capacity:</strong> {{ pin.capacity|number_format }}</p>
-                                        <p><strong>Opened:</strong> {{ pin.opened }}</p>
+                                        {% if pin.opened is defined and pin.opened != '' %}
+                                            <p class="mb-0"><strong>Opened:</strong> {{ pin.opened }}</p>
+                                        {% endif %}
+                                        {% if pin.closing is defined and pin.closing != '' %}
+                                            <p class="mb-0"><strong>Closing:</strong> {{ pin.closing }}</p>
+                                        {% endif %}
                                     </div>
                                     <div class="team-logo ms-5">
                                         <img src="{{ pin.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
@@ -76,11 +85,11 @@
                             {% set colour = team.teamColour[0].slug %}
                             {% set league = team.league %}
 
-                            <div class="team-card team-{{ team.id }} bg-white position-relative d-flex">
+                            <div class="team-card {{ league|kebab }} team-{{ team.id }} team-{{ colour }} bg-white position-relative d-flex">
                                 <div class="d-flex flex-row w-100">
-                                    <div class="team-info bg-{{ colour }} p-4 w-100 d-flex align-items-center">
+                                    <div class="team-info p-4 w-100 d-flex align-items-center">
                                         <div class="text">
-                                            <a class="stretched-link h5 mb-0" href="{{ team.url }}">{{ team.team }}</a>
+                                            <a class="stretched-link h5 mb-0" id="pin-{{ team.id }}" href="#region-map">{{ team.team }}</a>
                                             <p class="mb-0">{{ team.title }}</p>
                                         </div>
                                     </div>
