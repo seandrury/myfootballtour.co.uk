@@ -74,9 +74,9 @@
 
 {% if entries %}
     <nav style="gap: 16px">
-        <ol class="pagination justify-content-center">
+        <ol class="pagination justify-content-center align-items-center">
             {% for i in 1..pageInfo.totalPages %}
-                <li><a sprig class="{% if i == page %}active{% endif %}" s-val:page="{{ i }}" s-push-url="?page={{ i }}">{{ i }}</a>
+                <li><button sprig class="{% if i == page %}active{% endif %}" s-val:page="{{ i }}" s-push-url="?page={{ i }}">{{ i }}</button></li>
             {% endfor %}
         </ol>
     </nav>

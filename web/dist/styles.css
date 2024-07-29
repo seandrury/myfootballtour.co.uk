@@ -13821,10 +13821,6 @@ footer {
   padding-right: 5px;
 }
 
-.team-list {
-  grid-template-columns: 1fr 1fr;
-}
-
 .nav {
   position: fixed;
   z-index: 1030;
@@ -13869,6 +13865,29 @@ footer {
   .nav .nav-list .nav-item a {
     font-size: 1.5rem;
   }
+}
+
+.pagination li {
+  padding: 0 1.125rem;
+  font-size: 18px;
+}
+.pagination li button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.pagination li button:hover, .pagination li button:focus {
+  text-decoration: underline;
+}
+.pagination li button.active {
+  font-size: 36px;
+  cursor: default;
+  text-decoration: none;
+}
+
+.team-list {
+  grid-template-columns: 1fr 1fr;
 }
 
 .form-control {

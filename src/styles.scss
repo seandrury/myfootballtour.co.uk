@@ -274,10 +274,6 @@ $team-colours: (
 	}
 }
 
-.team-list {
-	grid-template-columns: 1fr 1fr;
-}
-
 .nav {
 	position: fixed;
 	z-index: $zindex-fixed;
@@ -336,6 +332,34 @@ $team-colours: (
 			}
 		}
 	}
+}
+
+.pagination {
+	li {
+		padding: 0 1.125rem;
+		font-size: 18px;
+
+		button {
+			background-color: transparent;
+			border: none;
+			color: $white;
+			cursor: pointer;
+			
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+
+			&.active {
+				font-size: 36px;
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.team-list {
+	grid-template-columns: 1fr 1fr;
 }
 
 // #select-leagues {
