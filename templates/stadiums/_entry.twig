@@ -79,7 +79,7 @@
                 </div>
                 {% endif %}
 
-                <div class="row related-stadiums">
+                <div class="row stadium-list">
                     <div class="col-12">
                         {% set relatedStadiums = craft.entries.section('stadiums').relatedTo(entry.region).id("not " ~ entry.id).orderBy("team ASC").all %}
                         

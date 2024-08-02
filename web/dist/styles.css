@@ -13889,6 +13889,14 @@ footer {
 .team-list {
   grid-template-columns: 1fr 1fr;
 }
+.team-list .team-card {
+  border-radius: 25px;
+  border: 5px solid #ffffff;
+  overflow: hidden;
+}
+.team-list .team-card .team-info.bg-white {
+  color: #1C1C1C;
+}
 
 .form-control {
   border: none;
@@ -13924,19 +13932,31 @@ footer {
 .form-control input[type=checkbox]:checked:before {
   display: block;
 }
-.form-control input[type=text] {
+.form-control input[type=text], .form-control select {
   background-color: transparent;
   border: 3px solid #ffffff;
   color: #ffffff;
   padding: 6px 10px;
 }
-.form-control input[type=text]:focus {
+.form-control input[type=text]:focus, .form-control select:focus {
   outline: none;
 }
-.form-control input[type=text] ~ span {
+.form-control input[type=text] ~ span, .form-control select ~ span {
   position: absolute;
+}
+.form-control input[type=text] ~ span {
   right: 16px;
   top: 11px;
+}
+.form-control select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  min-width: 250px;
+  background-image: url("/assets/icons/dropdown-arrow.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 10px top 50%, 0 0;
+  background-size: 12px auto, 100%;
 }
 
 .league-colours #select-leagues .form-control input[type=checkbox]:checked#premier-league {
@@ -14065,38 +14085,38 @@ footer {
   min-width: 460px;
   z-index: 10;
 }
-.map-region .region-teams .team-card {
-  border-radius: 25px;
-  border: 5px solid #ffffff;
-  overflow: hidden;
-}
-.map-region .region-teams .team-card .team-info.bg-white {
-  color: #1C1C1C;
-}
 
-.related-stadiums .card figure {
+.stadium-list .card figure {
   border-radius: 25px;
   overflow: hidden;
 }
-.related-stadiums .card figure a {
+.stadium-list .card figure a {
   color: #ffffff;
 }
-.related-stadiums .card figure figcaption {
+.stadium-list .card figure figcaption {
   bottom: 0;
   padding: 1rem;
   background: linear-gradient(0deg, #000000 50%, rgba(0, 0, 0, 0) 100%);
   border-radius: 0 0 25px 25px;
 }
-.related-stadiums .card figure img {
+.stadium-list .card figure img {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.related-stadiums .card figure:hover img, .related-stadiums .card figure:focus img {
+.stadium-list .card figure:hover img, .stadium-list .card figure:focus img {
   -webkit-filter: brightness(70%);
   transform: scale(1.1);
+}
+
+.stadiums-view .team-list {
+  display: none;
+}
+
+.teams-view .stadium-list {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

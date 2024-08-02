@@ -360,6 +360,18 @@ $team-colours: (
 
 .team-list {
 	grid-template-columns: 1fr 1fr;
+
+	.team-card {
+		border-radius: 25px;
+		border: 5px solid $team-white;
+		overflow: hidden;
+
+		.team-info {
+			&.bg-white {
+				color: $black;
+			}
+		}
+	}
 }
 
 // #select-leagues {
@@ -401,7 +413,7 @@ $team-colours: (
 			}
 		}
 
-		input[type="text"] {
+		input[type="text"], select {
 			background-color: transparent;
 			border: 3px solid $white;
 			color: $white;
@@ -413,9 +425,43 @@ $team-colours: (
 
 			~ span {
 				position: absolute;
+			}
+		}
+
+		input[type="text"] {
+			~ span {
 				right: 16px;
 				top: 11px;
 			}
+		}
+
+		select {
+			-moz-appearance: none; /* Firefox */
+			-webkit-appearance: none; /* Safari and Chrome */
+			appearance: none;
+			min-width: 250px;
+
+			background-image: url('/assets/icons/dropdown-arrow.svg');
+			background-repeat: no-repeat, repeat;
+			background-position: right 10px top 50%, 0 0;
+			background-size: 12px auto, 100%;
+
+			// ~ span {
+			// 	right: 25px;
+			// 	top: 15px;
+			// }
+
+			// &:before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	width: 0; 
+			// 	height: 0; 
+			// 	border-left: 20px solid transparent;
+			// 	border-right: 20px solid transparent;
+			// 	border-top: 20px solid $black;
+			// 	right: 0;
+			// 	top: 0;
+			// }
 		}
 	}
 // }
@@ -613,23 +659,9 @@ $team-colours: (
 			z-index: 10;
 		}
 	}
-
-	.region-teams {
-		.team-card {
-			border-radius: 25px;
-			border: 5px solid $team-white;
-			overflow: hidden;
-
-			.team-info {
-				&.bg-white {
-					color: $black;
-				}
-			}
-		}
-	}
 }
 
-.related-stadiums {
+.stadium-list {
 	.card {
 		figure {
 			border-radius: 25px;
@@ -661,5 +693,17 @@ $team-colours: (
 				}
 			}
 		}
+	}
+}
+
+.stadiums-view {
+	.team-list {
+		display: none;
+	}
+}
+
+.teams-view {
+	.stadium-list {
+		display: none;
 	}
 }
