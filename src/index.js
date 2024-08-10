@@ -50,26 +50,26 @@ function toggleAccessibilityMode() {
 	});
 }
 
-function toggleListView() {
-	$(".toggle-view .switch input[type='checkbox']").change(function() {
-		console.log('toggle view');
+// function toggleListView() {
+// 	$(".toggle-view .switch input[type='checkbox']").change(function() {
+// 		console.log('toggle view');
 		
-		if(this.checked) {
-			// $("#team-list").removeClass('d-none');
-			// $("#stadium-list").addClass('d-none');
+// 		if(this.checked) {
+// 			// $("#team-list").removeClass('d-none');
+// 			// $("#stadium-list").addClass('d-none');
 
-			$(".view").addClass('teams-view');
-			$(".view").removeClass('stadiums-view');
-		}
-		else {
-			// $("#team-list").addClass('d-none');
-			// $("#stadium-list").removeClass('d-none');
+// 			$(".view").addClass('teams-view');
+// 			$(".view").removeClass('stadiums-view');
+// 		}
+// 		else {
+// 			// $("#team-list").addClass('d-none');
+// 			// $("#stadium-list").removeClass('d-none');
 
-			$(".view").addClass('stadiums-view');
-			$(".view").removeClass('teams-view');
-		}
-	});
-}
+// 			$(".view").addClass('stadiums-view');
+// 			$(".view").removeClass('teams-view');
+// 		}
+// 	});
+// }
 
 function setupMap() {
 	
