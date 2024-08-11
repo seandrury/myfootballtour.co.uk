@@ -7,7 +7,7 @@ siteSettings:
   4a316ab3-49ff-4925-aada-2e783ce740ae: # myfootballtour.co.uk
     enabledByDefault: true
     hasUrls: true
-    template: pages
+    template: _pages
     uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null

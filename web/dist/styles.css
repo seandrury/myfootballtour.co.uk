@@ -13898,11 +13898,14 @@ footer {
   color: #1C1C1C;
 }
 
-.form-control {
+form {
+  /* Change the white to any color */
+}
+form .form-control {
   border: none;
   gap: 1.5rem;
 }
-.form-control input[type=checkbox] {
+form input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
@@ -13915,7 +13918,7 @@ footer {
   display: grid;
   place-content: center;
 }
-.form-control input[type=checkbox]:before {
+form input[type=checkbox]:before {
   content: "";
   width: 0.75rem;
   height: 1.5rem;
@@ -13926,29 +13929,29 @@ footer {
   transform: translate(-2px, -2px);
   display: none;
 }
-.form-control input[type=checkbox]:checked {
+form input[type=checkbox]:checked {
   background-color: #11D100;
 }
-.form-control input[type=checkbox]:checked:before {
+form input[type=checkbox]:checked:before {
   display: block;
 }
-.form-control input[type=text], .form-control select {
+form input[type=text], form input[type=email], form textarea, form select {
   background-color: transparent;
   border: 3px solid #ffffff;
   color: #ffffff;
   padding: 6px 10px;
 }
-.form-control input[type=text]:focus, .form-control select:focus {
+form input[type=text]:focus, form input[type=email]:focus, form textarea:focus, form select:focus {
   outline: none;
 }
-.form-control input[type=text] ~ span, .form-control select ~ span {
+form input[type=text] ~ span, form input[type=email] ~ span, form textarea ~ span, form select ~ span {
   position: absolute;
 }
-.form-control input[type=text] ~ span {
+form input[type=text] ~ span {
   right: 16px;
   top: 11px;
 }
-.form-control select {
+form select {
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */
   appearance: none;
@@ -13957,6 +13960,15 @@ footer {
   background-repeat: no-repeat, repeat;
   background-position: right 10px top 50%, 0 0;
   background-size: 12px auto, 100%;
+}
+form input:-webkit-autofill,
+form input:-webkit-autofill:hover,
+form input:-webkit-autofill:focus,
+form input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px rgba(35, 35, 35, 0.1607843137);
 }
 
 .league-colours #select-leagues .form-control input[type=checkbox]:checked#premier-league {

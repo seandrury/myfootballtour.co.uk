@@ -1,0 +1,47 @@
+<form class="my-8" method="post" accept-charset="UTF-8">
+    {{ csrfInput() }}
+
+    <input id="action" type="hidden" name="action" value="formhandler/contact-form">
+    <input type="hidden" id="g-recaptcha-token" name="g-recaptcha-token">
+
+    <div class="row">
+        <label class="form-label col-lg-4" for="name">Name</label>
+        <div class="col-lg-8 mb-3">
+            <input type="text" class="w-100" id="name" name="Name" placeholder="Enter your name" autocomplete="off" required>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label col-lg-4" for="email">Email address</label>
+        <div class="col-lg-8 mb-3">
+            <input type="text" class="w-100" id="email" name="Email" placeholder="Enter your email address" autocomplete="off" required>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label col-lg-4" for="team">Which team do you support?</label>
+        <div class="col-lg-8 mb-3">
+            <select class="w-100" id="team" name="Team" placeholder="Please select">
+
+                <option value="">Please select</option>
+
+                {% for stadium in stadiums %}
+                    <option value="{{ stadium.team|kebab }}">{{ stadium.team }}</option>
+                {% endfor %}
+
+                <option value="other">Other</option>
+
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label col-lg-4" for="story">What's your story?</label>
+        <div class="col-lg-8 mb-3">
+            <textarea rows="4" class="w-100" id="story" name="Story" placeholder="Where did you start, how long did it take, any setbacks?" required></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 offset-lg-8 text-end">
+            <button class="btn btn-primary" type="submit" title="Submit the form">Send</button>
+        </div>
+    </div>
+</form>
