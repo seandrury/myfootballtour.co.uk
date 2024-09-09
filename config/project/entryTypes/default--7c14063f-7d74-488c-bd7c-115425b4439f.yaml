@@ -30,19 +30,7 @@ fieldLayouts:
             uid: 45629bfa-cf3f-4752-9dbf-7dc0660a87ac
             userCondition: null
             warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 985f822c-337b-406b-b800-dfb08fd1513a # Main stadium image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d65c8a8f-b8e7-4f24-9b1b-d50c423f5dd7
-            userCondition: null
-            warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: 9c9fae53-56ca-49c0-b22c-a5301e981865 # Region

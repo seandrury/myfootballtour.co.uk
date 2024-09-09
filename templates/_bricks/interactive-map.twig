@@ -77,35 +77,37 @@
             
             <img src="/" class="map-image img-fluid py-5 w-100 h-100">
 
-            {% for region in regions %}
-                <div class="region-teams mt-2 mb-5 {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
-                    {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['teamColour', 'badge']).orderby("team ASC") %}
+        </div>
 
-                    <p class="mb-5">Teams in this region:</p>
+        {% for region in regions %}
+            <div class="region-teams mt-2 mb-5 {{ region.slug }}" data-id="{{ region.slug }}" style="display: none;">
+                {% set stadiums = craft.entries.section('stadiums').relatedTo(region).with(['teamColour', 'badge']).orderby("team ASC") %}
 
-                    <div class="grid team-list" style="gap: 20px">
-                        {% for team in stadiums %}
-                            {% set colour = team.teamColour[0].slug %}
-                            {% set league = team.league %}
+                <p class="mb-5">Teams in this region:</p>
 
-                            <div class="team-card {{ league|kebab }} team-{{ team.id }} team-{{ colour }} bg-white position-relative d-flex">
-                                <div class="d-flex flex-row w-100">
-                                    <div class="team-info p-4 w-100 d-flex align-items-center">
-                                        <div class="text">
-                                            <a class="stretched-link h5 mb-0" id="pin-{{ team.id }}" href="#region-map">{{ team.team }}</a>
-                                            <p class="mb-0">{{ team.title }}</p>
-                                        </div>
-                                    </div>
-                                    <div class="team-logo p-3 my-auto">
-                                        <img src="{{ team.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
+                <div class="grid team-list" style="gap: 20px">
+                    {% for team in stadiums %}
+                        {% set colour = team.teamColour[0].slug %}
+                        {% set league = team.league %}
+
+                        <div class="team-card {{ league|kebab }} team-{{ team.id }} team-{{ colour }} bg-white position-relative d-flex">
+                            <div class="d-flex flex-row w-100">
+                                <div class="team-info p-4 w-100 d-flex align-items-center">
+                                    <div class="text">
+                                        <a class="stretched-link h5 mb-0" id="pin-{{ team.id }}" href="#region-map">{{ team.team }}</a>
+                                        <p class="mb-0">{{ team.title }}</p>
                                     </div>
                                 </div>
+                                <div class="team-logo p-3 my-auto">
+                                    <img src="{{ team.badge[0].getUrl('clubCrest') ?? '' }}" class="img-fluid">
+                                </div>
                             </div>
-                        {% endfor %}
-                    </div>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
+        
     </div>
 
     <div class="labelled-switch d-flex flex-row align-items-center mb-3 toggle-colours">
