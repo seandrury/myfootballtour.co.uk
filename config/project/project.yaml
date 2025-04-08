@@ -1,4 +1,4 @@
-dateModified: 1724956435
+dateModified: 1725912831
 elementSources:
   craft\elements\Category:
     -
@@ -54,6 +54,7 @@ elementSources:
         - 'field:e990e909-8438-4c24-a235-6c086ae9edf6' # Badge
         - 'field:5878131a-7dba-477f-b0d6-902fa8722fda' # League
         - 'field:9828a3dc-019d-4e25-905d-4e2f7046d88b' # Team Colour
+        - 'field:ea3899cc-7f6f-4358-a8b4-d8da24f2e4e0' # Gallery
       type: native
     -
       heading: Structures
