@@ -22,6 +22,15 @@
 
 use craft\helpers\App;
 
-return [
+$appConfig = [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
 ];
+
+$appConfig['modules'] = [
+    'formhandler' => [
+        'class' => \modules\formhandler\Module::class
+    ],
+    'bootstrap' => ['formhandler'],
+];
+
+return $appConfig;
