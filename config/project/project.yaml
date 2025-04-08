@@ -1,4 +1,4 @@
-dateModified: 1725912831
+dateModified: 1744143256
 elementSources:
   craft\elements\Category:
     -
@@ -74,8 +74,16 @@ elementSources:
       type: native
 email:
   fromEmail: sean_drury@hotmail.co.uk
-  fromName: myfootballtour.co.uk
-  transportType: craft\mail\transportadapters\Sendmail
+  fromName: $SYSTEM_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    useAuthentication: '1'
+    username: $SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   images:
     hasUrls: true
@@ -171,7 +179,7 @@ system:
   name: $SYSTEM_NAME
   retryDuration: null
   schemaVersion: 4.5.3.0
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
