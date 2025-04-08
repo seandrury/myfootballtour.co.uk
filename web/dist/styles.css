@@ -13971,29 +13971,76 @@ form input:-webkit-autofill:active {
   box-shadow: inset 0 0 20px 20px rgba(35, 35, 35, 0.1607843137);
 }
 
-.league-colours #select-leagues .form-control input[type=checkbox]:checked#premier-league {
+.interactive-map.league-colours #select-leagues .form-control input[type=checkbox]:checked#premier-league {
   background-color: #11D100;
 }
-.league-colours #select-leagues .form-control input[type=checkbox]:checked#championship {
+.interactive-map.league-colours #select-leagues .form-control input[type=checkbox]:checked#championship {
   background-color: #006ED3;
 }
-.league-colours #select-leagues .form-control input[type=checkbox]:checked#league-one {
+.interactive-map.league-colours #select-leagues .form-control input[type=checkbox]:checked#league-one {
   background-color: #A50233;
 }
-.league-colours #select-leagues .form-control input[type=checkbox]:checked#league-two {
+.interactive-map.league-colours #select-leagues .form-control input[type=checkbox]:checked#league-two {
   background-color: #E66F00;
 }
-.league-colours .map-region .region-pins .stadium-details.premier-league .stadium-pin {
+.interactive-map.league-colours .map-region .region-pins .stadium-details.premier-league .stadium-pin {
   background-color: #11D100;
 }
-.league-colours .map-region .region-pins .stadium-details.championship .stadium-pin {
+.interactive-map.league-colours .map-region .region-pins .stadium-details.championship .stadium-pin {
   background-color: #006ED3;
 }
-.league-colours .map-region .region-pins .stadium-details.league-one .stadium-pin {
+.interactive-map.league-colours .map-region .region-pins .stadium-details.league-one .stadium-pin {
   background-color: #A50233;
 }
-.league-colours .map-region .region-pins .stadium-details.league-two .stadium-pin {
+.interactive-map.league-colours .map-region .region-pins .stadium-details.league-two .stadium-pin {
   background-color: #E66F00;
+}
+.interactive-map.accessibility-mode #select-leagues input + span {
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  display: block;
+  background-color: #11D100;
+  border: 2px solid #1C1C1C;
+  box-shadow: 0 4px 4px rgba(28, 28, 28, 0.4);
+  z-index: 3;
+}
+.interactive-map.accessibility-mode #select-leagues #championship + span {
+  border-radius: 0;
+}
+.interactive-map.accessibility-mode #select-leagues #league-one + span {
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+.interactive-map.accessibility-mode #select-leagues #league-two + span {
+  border-radius: 0;
+  transform: skew(30deg);
+}
+.interactive-map.accessibility-mode.league-colours #premier-league + span {
+  background-color: #11D100;
+}
+.interactive-map.accessibility-mode.league-colours #championship + span {
+  background-color: #006ED3;
+}
+.interactive-map.accessibility-mode.league-colours #league-one + span {
+  background-color: #A50233;
+}
+.interactive-map.accessibility-mode.league-colours #league-two + span {
+  background-color: #E66F00;
+}
+
+.accessibility-mode .region-pins .stadium-details.championship .stadium-pin {
+  border-radius: 0;
+}
+.accessibility-mode .region-pins .stadium-details.league-one .stadium-pin {
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+.accessibility-mode .region-pins .stadium-details.league-two .stadium-pin {
+  border-radius: 0;
+  transform: skew(30deg);
 }
 
 .labelled-switch {
